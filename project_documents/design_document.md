@@ -16,8 +16,10 @@ level of detail to aim for.*
 ## *Project Title* Design
 
 ## 1. Problem Statement
+BloomTech Shopping Complex is a one stop shop online shopping mall. We provide online access to all the top stores all in one place, our goal is to make online shopping as convenant and simple as possible.
 
-*Explain clearly what problem you are trying to solve.*
+This design document will provide clarification on how the shopping platform will work including the functionality on how our customers will interacte with the site to satisfy our customers' needs.
+
 
 
 ## 2. Top Questions to Resolve in Review
