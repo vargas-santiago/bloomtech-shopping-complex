@@ -1,4 +1,4 @@
-# [team name] Design Document
+# [BloomTech Shopping Complex] Design Document
 
 ## Instructions
 
