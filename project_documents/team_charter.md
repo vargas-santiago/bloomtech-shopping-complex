@@ -35,90 +35,73 @@ These resources may be helpful as you fill out your team charter. They are optio
 
 |Name            |Preferred Contact Method (Zoom, Slack, email, etc.) |
 |---	           |---                                           |
-|Team Member (a) |                                              |
-|Team Member (b) |                                              |
-|Team Member (c) |                                              |
-|Team Member (d) |                                              |
+| Jemar Johnson |  Slack  |
+| Santiago Vargas |  Slack  |
+| Kassandra Gillmore |  Slack  |
 
 ### Psychological safety
 
 * **How can we take risks on this team without feeling insecure or
   embarrassed?**
-    *E.g., Be open to opinions that differ from your own, actively ask for
-    opinions from each member of the team, do not interrupt each other, don’t
-    place blame, all suggestions or questions are encouraged, listened to,
-    considered equally, and never judged*
+    We ask for all opinions and listen to everyone's opinions without judgement.
 
 * **How do we address situations where any team member feels unsafe?**
-    *E.g., communicate when there is a misunderstanding, don’t move forward
-    until the situation is resolved, directly address and resolve negativity,
-    give and receive feedback with a positive, strength-building mindset, if
-    necessary, escalate to a BloomTech staff member*  
+    We won't move forward until the situation is resolved and we are all on the 
+    same page again with lots of communication.
 
 ### Dependability, Structure, Clarity
 
 * **How can we count on each other to do high quality work on time?**
-     *E.g., estimate task size, break down large tasks, call out tasks at risk
-     early, ask each other for help, how to ensure timely code reviews, how to
-     share knowledge, help each other hold accountability give frequent,
-     scheduled updates*  
+     We will break down the project into reasonable sized tasks, making sure each team member
+  has an even amount of work to do and doing code reviews within the team.
 
 * **How do we address missed deadlines?**
-     *E.g., acknowledge, but don’t punish slipped dates, figure out what went
-     wrong, identify lessons for future*
+    Figure out what went wrong so that we don't make the same mistake again and acknowledge to 
+    the others that you missed it so that it can be completed. 
 
 * **How can we make goals, roles, and execution plans on our team clear?**
-     *E.g., where to track goals and when to review them, use definitive,
-     quantifiable terminology, include clear background on why this goal is
-     necessary, include “done” criteria for the goal (code is pushed with
-     integration tests, document is reviewed, etc.)*
+     We are using Trello to keep goals and tasks clear and so that each team member knows
+    our expectations.
 
 
 ### Goals
 
 * **Overall: What is our overall objective for the Learn & Be Curious unit?**
-    *E.g., “Apply what we’ve learned throughout BloomTech in a team project to prepare
-    ourselves for internships and full-time SDE roles.”*
+    Learn new things. 
 
 
 * **Performance: What do we want to prioritize in terms of what we achieve?**
-    *What will be true when you have 'succeeded' on this project? E.g. enjoy
-    ourselves, maintain our energy to the end, ensure all team members
-    participate, create professional connections, exceed instructor
-    expectations, efficiently pace the project so we’re not rushing at the end,
-    etc.*
+    Ensure all team members participate, learning to work in a team environment and 
+    adding to our personal portfolios.
 
 
 * **Learning: What are the things that our team wants to learn?**
-    *E.g., develop SDE knowledge, enhance leadership skills, master project
-    planning, improve testing skills, etc*
+    Good communication skills, writing a whole project from scratch and developing team skills
 
 
 * **Task processes: What processes will our team follow to meet our goals,
   complete tasks, or to build team relationships?**
-    *E.g., leadership, meeting procedures/length of meetings, expectations for
-    meeting attendance and timeliness, other types of meetings (happy hours,
-    lunch and learns)*
+    Having stand-up meetings daily and sprint planning meetings weekly, and keeping 
+    our Trello page updated
 
 
 ## Meaning & Impact
 
 **What is personally important for each team member about joining BloomTech? About
-becoming an software engineer?**
+becoming a software engineer?**
 
-* *Team member name*:
-* *Team member name*:
-* *Team member name*:
-* *Team member name*:
+* Jemar: getting work environment experience
+* Santiago: to work on portfolio and get work environment experience
+* Kassandra: building a portfolio and having the skills to have a career
+
 
 **What each team member wants to achieve: e.g. improve analytical skills, learn
 project management skills, develop public speaking skills, speak up more, speak
 up less, etc.**
 
-* *Team member name*:
-* *Team member name*:
-* *Team member name*:
-* *Team member name*:
+* Jemar: learn project management skills
+* Santiago: learn general good coding practices
+* Kassandra: learning how to work effectively on a team, project management skills
 
 ## Team Member Roles and Responsibilities
 
@@ -129,8 +112,8 @@ rotating or permanent roles as you go.*
 
 |**Role**               |**Responsibilities** |**Primary person** |**Secondary person** |
 |---                    |---                  |---                |---                  |
-|Liaison to Instructors | Main contact to instructor to give status updates, including team dynamics, project progress, etc |||
-|Rotating Role 1        |                     |                   |                     |
+|Liaison to Instructors | Main contact to instructor to give status updates, including team dynamics, project progress, etc | Jemar ||
+|Documentation          | keeping documentation of the project and who is doing what tasks | Kassandra |                     |
 |Rotating Role 2        |                     |                   |                     |
 |Rotating Role 3        |                     |                   |                     |
 
@@ -138,7 +121,7 @@ rotating or permanent roles as you go.*
 
 **I agree to the terms and conditions of these team agreements:**
 
-* Team member (a) Name & Date:
+* Team member (a) Name & Date: 
 * Team member (b) Name & Date:
-* Team member (c) Name & Date:
+* Team member (c) Name & Date: Kassandra Gillmore 03-08-22
 * Team member (d) Name & Date:
