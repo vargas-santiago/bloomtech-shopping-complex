@@ -1,4 +1,4 @@
-# [team name] Team Charter
+# BloomTech Shopping Complex Team Charter
 
 ## Instructions
 

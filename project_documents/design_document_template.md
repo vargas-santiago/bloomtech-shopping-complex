@@ -13,16 +13,15 @@ italics)*
 this template for more guidance on the types of information to capture, and the
 level of detail to aim for.*
 
-## BloomTech Shopping Complex Design
+## *Project Title* Design
 
 ## 1. Problem Statement
-BloomTech Shopping Complex is a one-stop shop online shopping mall. We provide online access 
-to all the top stores all in one place, our goal is to make online shopping as convenient 
-and simple as possible, eliminating the burden of having to travel to a physical location.
+BloomTech Shopping Complex is a one stop shop online shopping mall. We provide online 
+access to all the top stores all in one place, our goal is to make online shopping as convenient 
+and simple as possible.
 
-This design document will provide clarification on how the shopping platform will work 
-including the functionality on how our customers will interact with the site to satisfy 
-our customers' needs. 
+This design document will provide clarification on how the shopping platform will work including the 
+functionality on how our customers will interacte with the site to satisfy our customers' needs.
 
 
 
@@ -31,9 +30,9 @@ our customers' needs.
 *List the most important questions you have about your design, or things that
 you are still debating internally that you might like help working through.*
 
-1.   
-2.   
-3.  
+1.
+2.
+3.
 
 ## 3. Use Cases
 
@@ -45,7 +44,7 @@ U1. *As a [product] customer, I want to `<result>` when I `<action>`*
 
 U2. *As a [product] customer, I want to view my grocery list when I log into the
 grocery list page*
-    
+
 U3. ...
 
 ## 4. Project Scope
