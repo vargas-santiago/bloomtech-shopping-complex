@@ -122,6 +122,6 @@ rotating or permanent roles as you go.*
 **I agree to the terms and conditions of these team agreements:**
 
 * Team member (a) Name & Date: 
-* Team member (b) Name & Date:
+* Team member (b) Name & Date: Santiago Vargas 3-8-22
 * Team member (c) Name & Date: Kassandra Gillmore 03-08-22
 * Team member (d) Name & Date:
