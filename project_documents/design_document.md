@@ -176,7 +176,7 @@ List<String> category;
 
 ## 6.8 Update Store Info Endpoint
 
-* Accepts `GET` requests to `stores/storeId`
+* Accepts `PUT` requests to `stores/storeId`
 * Accepts data needed to update the store like a storeId, name, list of items in store, category and popularity.
   * If store ID is not found, will throw `StoreNotFoundException`
 
