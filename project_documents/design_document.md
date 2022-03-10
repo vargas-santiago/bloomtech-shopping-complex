@@ -152,6 +152,21 @@ List<String> category;
 * Accepts a user ID and returns corresponding AccountModel.
   * If user ID is not found, will throw a `UserNotFoundException`
 
+## 6.5 AddToFavorites Endpoint
+
+* Accepts `POST` request to `accounts/:userId/store`
+* Accepts a user ID and a store to be added. The store is specified by the storeId
+ * If the user is not found, will throw a `UserNotFoundException`
+ * If the storeId doesn't exist, throw `StoreNotFoundException`
+* By default, will insert the new store to the end of the store list
+
+## 6.6 DeleteFavorites EndPoint
+
+* Accepts `Delete` request to `accounts/:userId/store`
+* Accepts a user ID and a store to be deleted from the list. The store is specified by the storeId
+* If the user is not found, will throw `UserNotFoundException`
+* If the storeId doesn't exist, throw `StoreNotFoundException`
+
 # 7. Tables
 
 ## 7.1. 'accounts'
