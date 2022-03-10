@@ -167,6 +167,28 @@ List<String> category;
 * If the user is not found, will throw `UserNotFoundException`
 * If the storeId doesn't exist, throw `StoreNotFoundException`
 
+
+## 6.7 Get Store Info Endpoint
+
+* Accepts `GET` requests to `stores/storeId`
+* Accepts a store ID and returns corresponding StoreModel.
+  * If store ID is not found, will throw `StoreNotFoundException`
+
+## 6.8 Update Store Info Endpoint
+
+* Accepts `GET` requests to `stores/storeId`
+* Accepts data needed to update the store like a storeId, name, list of items in store, category and popularity.
+  * If store ID is not found, will throw `StoreNotFoundException`
+
+[//]: # (## 6.7 Delete Store Endpoint NOTE: THIS ONE MIGHT NOT BE IMPLEMENTED)
+
+[//]: # ()
+[//]: # (* Accepts `POST` requests to `stores/storeId`)
+
+[//]: # (* Accepts a store ID and returns nothing. )
+
+[//]: # (  * If store ID is not found, will throw `StoreNotFoundException`)
+
 # 7. Tables
 
 ## 7.1. 'accounts'
