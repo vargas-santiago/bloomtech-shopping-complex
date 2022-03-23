@@ -1,4 +1,4 @@
-# [BloomTech Shopping Complex] Design Document
+# BloomTech Shopping Complex Design Document
 
 ## Instructions
 
@@ -152,7 +152,7 @@ List<String> category;
 * Accepts a user ID and returns corresponding AccountModel.
   * If user ID is not found, will throw a `UserNotFoundException`
 
-## 6.5 AddToFavorites Endpoint
+## 6.5 Add To Favorites Endpoint
 
 * Accepts `POST` request to `accounts/:userId/store`
 * Accepts a user ID and a store to be added. The store is specified by the storeId
@@ -162,10 +162,10 @@ List<String> category;
 
 ## 6.6 DeleteFavorites EndPoint
 
-* Accepts `Delete` request to `accounts/:userId/store`
+* Accepts `DELETE` request to `accounts/:userId/store`
 * Accepts a user ID and a store to be deleted from the list. The store is specified by the storeId
-* If the user is not found, will throw `UserNotFoundException`
-* If the storeId doesn't exist, throw `StoreNotFoundException`
+  * If the user is not found, will throw `UserNotFoundException`
+  * If the storeId doesn't exist, throw `StoreNotFoundException`
 
 
 ## 6.7 Get Store Info Endpoint
@@ -218,10 +218,46 @@ quantity // int
 
 # 8. Pages
 
-*Include mock-ups of the web pages you expect to build. These can be as
-sophisticated as mockups/wireframes using drawing software, or as simple as
-hand-drawn pictures that represent the key customer-facing components of the
-pages. It should be clear what the interactions will be on the page, especially
-where customers enter and submit data. You may want to accompany the mockups
-with some description of behaviors of the page (e.g. “When customer submits the
-submit-dog-photo button, the customer is sent to the doggie detail page”)*
+![Every page has a BloomTech Shopping Complex header and logout button. The 
+first page is a basic login page with username and password fields and "login" 
+and "sign up" buttons. Clicking the sign up button takes you to the sign up page.
+The sign up page says "Sign Up" with fields to enter a username, password, name, 
+and email. There is a "cancel" button to return to the login page and a "sign up" 
+button to create a new user account.](images/design_document/signup.png)
+
+![The account details page says "Your Account" and displays the userId, name and 
+email of the logged in account. Clicking the view button next to "Favorites:" 
+takes you to the "Favorites" page. Clicking the "Edit Account" button takes you to the 
+"Edit Account" page. Clicking the "View Stores" button takes you to the "Stores" 
+page.](images/design_document/accountdetails.png)
+
+![The edit account page says "Edit Account". It displays the username of the logged
+in account. There are input fields for the user to enter the updated information. There
+is a "Cancel" button to return to the account details page without making any changes. 
+Clicking the "Delete Account" button deletes the account completely and returns to the 
+login/sign up page. Clicking the edit button updates the name and email fields of the
+logged in account.](images/design_document/editaccount.png)
+
+![The favorites page says "Favorites". It displays a list of the user's favorite stores
+with radio buttons by each store name. Selecting a radio button and then clicking "View
+Store" loads that specific stores item's page or clicking "Delete from Favorites" removes it 
+from the user's favorites list. There are also navi buttons at the bottom, "Account" and "Stores",
+which take you to the account details page or the stores page, 
+respectively.](images/design_document/favorites.png)
+
+![The stores page says "Stores". It has a card for each store that includes the store logo, 
+the store name, and the store categories. Each card also has a "Visit Store" button that 
+navigates to the store's item's page and a heart icon that adds that store to the user's
+favorites list and shows the store's popularity count (+1 for every user that favorites 
+the store). Above the cards is a dropdown box of filters, with options to sort the store cards
+alphabetically, by popularity or by category. "Account" to go to the account details page 
+and "Favorites" to go to the favorites page navi buttons are at the bottom
+as well as what page in the list of stores is showing out of how many total pages there are, with
+clickable arrows to view either the next or previous page.](images/design_document/stores.png)
+
+![The store's item's page shows the store logo as well as the clickable heart logo 
+that adds the store to the user's favorite list and counter. A green or red dot beside 
+the logo indicates whether the store is open or closed. There is a list of items the store is 
+currently offering for sale. "Account" button navigates to the account details page, 
+"Favorites" button navigates to the favorites page and the "Stores" button navigates
+to the stores page.](images/design_document/storepage.png)
