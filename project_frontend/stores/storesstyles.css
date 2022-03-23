@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logoimg {
+    width: 20em;
+    height: 20em;
+}
+
+.headerNav {
+    margin-top: 15em;
+}
+
+.btn {
+    display: inline;
+    background-color: #00c3b2;
+    padding: .5em 2em;
+    color: #191919;
+    margin-right: .5em;
+    font-family: 'DM Serif Display', serif;
+    font-size: medium;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+}

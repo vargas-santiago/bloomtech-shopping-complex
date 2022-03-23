@@ -14,13 +14,14 @@
     height: auto;
 }
 
-nav button {
+nav a {
     background-color: #191919;
     color: #00c3b2;
     font-size: larger;
     height: 5em;
     width: 10em;
     font-family: 'DM Serif Display', serif;
+    padding: 2em;
 }
 
 .log-form {
