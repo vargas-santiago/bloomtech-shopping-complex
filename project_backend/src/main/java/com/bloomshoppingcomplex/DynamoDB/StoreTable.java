@@ -1,4 +1,3 @@
-
 package main.java.com.bloomshoppingcomplex.DynamoDB;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;

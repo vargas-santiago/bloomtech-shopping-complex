@@ -1,27 +1,17 @@
-package main.java.com.bloomshoppingcomplex.TableModel.request;
+package main.java.com.bloomshoppingcomplex.Models;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 
-public class CreateAccountRequest {
+public class AccountModel {
     private String userId;
     private List<String> favorites;
     private String name;
     private String email;
 
-    public CreateAccountRequest(String userId, List<String> favorites, String name, String email) {
-        this.userId = userId;
-        this.favorites = favorites;
-        this.name = name;
-        this.email = email;
-    }
+    public AccountModel() {}
 
-    public CreateAccountRequest() {}
-
-    public CreateAccountRequest(Builder builder) {
-
-    }
+//    public AccountModel(Builder builder) {}
 
 
     public String getUserId() {
@@ -60,7 +50,7 @@ public class CreateAccountRequest {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CreateAccountRequest that = (CreateAccountRequest) o;
+        AccountModel that = (AccountModel) o;
         return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getFavorites(), that.getFavorites()) && Objects.equals(getName(), that.getName()) && Objects.equals(getEmail(), that.getEmail());
     }
 
@@ -71,11 +61,15 @@ public class CreateAccountRequest {
 
     @Override
     public String toString() {
-        return "CreateAccountRequest{" +
+        return "AccountModel{" +
                 "userId='" + userId + '\'' +
                 ", favorites=" + favorites +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
+
+//    public static Builder builder() {
+//        return new Builder();
+//    }
 }
