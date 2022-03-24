@@ -2,6 +2,8 @@ package com.bloomshoppingcomplex.Exceptions;
 
 public class ItemNotFoundException extends RuntimeException{
 
+    private static final long serialVersionUID = 19208649982956612L;
+
     public ItemNotFoundException() {
         super();
     }

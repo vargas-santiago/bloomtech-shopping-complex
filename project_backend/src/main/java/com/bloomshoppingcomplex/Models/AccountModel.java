@@ -11,7 +11,12 @@ public class AccountModel {
 
     public AccountModel() {}
 
-//    public AccountModel(Builder builder) {}
+    public AccountModel(Builder builder) {
+        this.userId = builder.userId;
+        this.favorites = builder.favorites;
+        this.name = builder.name;
+        this.email = builder.email;
+    }
 
 
     public String getUserId() {
@@ -69,7 +74,38 @@ public class AccountModel {
                 '}';
     }
 
-//    public static Builder builder() {
-//        return new Builder();
-//    }
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        private String userId;
+        private List<String> favorites;
+        private String name;
+        private String email;
+
+        public Builder withUserId(String userIdToUse) {
+            this.userId = userIdToUse;
+            return this;
+        }
+
+        public Builder withFavorites(List<String> favoritesToUse) {
+            this.favorites = favoritesToUse;
+            return this;
+        }
+
+        public Builder withName(String nameToUse) {
+            this.name = nameToUse;
+            return this;
+        }
+
+        public Builder withEmail(String emailToUse) {
+            this.email = emailToUse;
+            return this;
+        }
+
+        public AccountModel build() {
+            return new AccountModel(this);
+        }
+    }
 }
