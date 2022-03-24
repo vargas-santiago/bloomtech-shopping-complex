@@ -1,4 +1,4 @@
-package main.java.com.bloomshoppingcomplex.Exceptions;
+package com.bloomshoppingcomplex.Exceptions;
 
 public class InvalidCharacterException extends RuntimeException {
     private static final long serialVersionUID = -6415633257982720378L;

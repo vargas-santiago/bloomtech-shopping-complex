@@ -22,6 +22,16 @@ header {
     font-size: medium;
 }
 
+.btn:hover {
+    display: inline;
+    background-color: #191919;
+    padding: .5em 2em;
+    color: #00c3b2;
+    margin-right: .5em;
+    font-family: 'DM Serif Display', serif;
+    font-size: medium;
+}
+
 form {
     display: block;
     width: 100%;
@@ -59,4 +69,8 @@ input {
     justify-content: center;
     font-family: 'DM Serif Display', serif;
     font-size: medium;
+}
+
+a {
+    text-decoration: none;
 }

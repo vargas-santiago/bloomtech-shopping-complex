@@ -1,6 +1,7 @@
-package main.java.com.bloomshoppingcomplex.DynamoDB;
+package com.bloomshoppingcomplex.DynamoDB;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 
 public class AccountDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -10,13 +11,13 @@ public class AccountDao {
     }
 
     /**
-     * Returns the {@link AccountTable} corresponding to the specified id.
+     * Returns the {@link Account} corresponding to the specified id.
      *
      * @param userId for the Account
      * @return the stored account, or null if none was found.
      */
-    public AccountTable getAccount(String userId) {
-        AccountTable account = this.dynamoDbMapper.load(AccountTable.class, userId);
+    public Account getAccount(String userId) {
+        Account account = this.dynamoDbMapper.load(Account.class, userId);
 
         if (account == null) {
             throw new IllegalArgumentException();
@@ -24,7 +25,7 @@ public class AccountDao {
         return account;
     }
 
-    public AccountTable saveAccount(AccountTable account) {
+    public Account saveAccount(Account account) {
         this.dynamoDbMapper.save(account);
         return account;
     }

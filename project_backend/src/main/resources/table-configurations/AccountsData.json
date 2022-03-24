@@ -1,0 +1,27 @@
+{
+    "accounts": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "userId": {
+                        "S": "testUserId"
+                    },
+                    "name": {
+                        "S": "TestName"
+                    },
+                    "email": {
+                        "S": "TestEmail"
+                    },
+                    "favorites": {
+                    	"L": [
+                    	{
+                    		"S": "TestFavorite1",
+                    		"S": "TestFavorite2"
+                    	}
+                    	]
+                    }
+                }
+            }
+        }
+    ]
+}in

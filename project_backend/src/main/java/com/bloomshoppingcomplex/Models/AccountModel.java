@@ -1,4 +1,4 @@
-package main.java.com.bloomshoppingcomplex.Models;
+package com.bloomshoppingcomplex.Models;
 
 import java.util.List;
 import java.util.Objects;

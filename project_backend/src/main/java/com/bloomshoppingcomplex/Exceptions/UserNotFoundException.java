@@ -1,4 +1,4 @@
-package main.java.com.bloomshoppingcomplex.Exceptions;
+package com.bloomshoppingcomplex.Exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 2559293079248504516L;

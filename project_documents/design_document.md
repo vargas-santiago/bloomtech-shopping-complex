@@ -211,7 +211,7 @@ popularity / int
 ## 7.3. 'items'
 ```
 itemId // parition key, string
-storeName // sort key, string
+storeId // sort key, string
 name // string
 quantity // int
 ```

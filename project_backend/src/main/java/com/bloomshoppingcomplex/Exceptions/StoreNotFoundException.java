@@ -1,4 +1,4 @@
-package main.java.com.bloomshoppingcomplex.Exceptions;
+package com.bloomshoppingcomplex.Exceptions;
 
 public class StoreNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 8108830660088591539L;
