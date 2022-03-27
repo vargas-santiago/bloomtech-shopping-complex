@@ -5,11 +5,11 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.bloomshoppingcomplex.Converter.ModelConverter;
 import com.bloomshoppingcomplex.DynamoDB.Models.Store;
 import com.bloomshoppingcomplex.DynamoDB.StoreDao;
+import com.bloomshoppingcomplex.Exceptions.StoreNotFoundException;
 import com.bloomshoppingcomplex.Models.StoreModel;
-import com.bloomshoppingcomplex.Request.GetStoreInfoRequest;
-import com.bloomshoppingcomplex.Request.result.GetStoreInfoResult;
+import com.bloomshoppingcomplex.Models.Request.GetStoreInfoRequest;
+import com.bloomshoppingcomplex.Models.result.GetStoreInfoResult;
 
-import main.java.com.bloomshoppingcomplex.DynamoDB.StoreTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,18 +20,24 @@ public class GetStoreInfo implements RequestHandler<GetStoreInfoRequest, GetStor
     private final StoreDao storeDao;
 
     @Inject
-    public GetStoreInfo(StoreDao storeDao) { this.storeDao = storeDao; }
+    public GetStoreInfo(StoreDao storeDao) {
+        this.storeDao = storeDao;
+    }
 
     @Override
     public GetStoreInfoResult handleRequest(final GetStoreInfoRequest getStoreInfoRequest, Context context) {
         log.info("Received GetStoreInfoRequest{}", getStoreInfoRequest);
         String requestedStoreId = getStoreInfoRequest.getStoreId();
-        StoreTable store = storeDao.getStore(requestedStoreId);
+
+        if (requestedStoreId == null) {
+            throw new StoreNotFoundException(requestedStoreId + " Store ID not found.");
+        }
+
+        Store store = storeDao.getStore(requestedStoreId);
         StoreModel storeModel = new ModelConverter().toStoreModel(store);
 
         return GetStoreInfoResult.builder()
                 .withStore(storeModel)
                 .build();
-
     }
 }

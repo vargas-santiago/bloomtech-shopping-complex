@@ -5,7 +5,6 @@ import com.bloomshoppingcomplex.DynamoDB.Models.Store;
 import com.bloomshoppingcomplex.Models.AccountModel;
 import com.beust.jcommander.internal.Lists;
 import com.bloomshoppingcomplex.Models.StoreModel;
-import main.java.com.bloomshoppingcomplex.DynamoDB.StoreTable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ public class ModelConverter {
                 .build();
     }
 
-    public StoreModel toStoreModel (StoreTable store) {
+    public StoreModel toStoreModel (Store store) {
         List<String> categories = new ArrayList<>();
 
         if (store.getCategories() == null) {

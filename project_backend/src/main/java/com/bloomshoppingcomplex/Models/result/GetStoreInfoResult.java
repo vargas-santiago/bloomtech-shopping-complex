@@ -1,7 +1,6 @@
-package com.bloomshoppingcomplex.Request.result;
+package com.bloomshoppingcomplex.Models.result;
 
 import com.bloomshoppingcomplex.Models.StoreModel;
-import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class GetStoreInfoResult {
     private StoreModel store;

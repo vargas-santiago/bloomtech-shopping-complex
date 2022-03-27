@@ -1,11 +1,12 @@
-package com.bloomshoppingcomplex.Request.result;
+package com.bloomshoppingcomplex.Models.result;
+
 
 import com.bloomshoppingcomplex.Models.AccountModel;
 
-public class GetAccountResult {
+public class CreateAccountResult {
     private AccountModel account;
 
-    public GetAccountResult(Builder builder) {
+    public CreateAccountResult(Builder builder) {
         this.account = builder.account;
     }
 
@@ -24,13 +25,13 @@ public class GetAccountResult {
     public static final class Builder {
         private AccountModel account;
 
-        public Builder withAccount(AccountModel accountToUse) {
-            this.account = accountToUse;
+        public Builder withAccount(AccountModel account) {
+            this.account = account;
             return this;
         }
 
-        public GetAccountResult build() {
-            return new GetAccountResult(this);
+        public CreateAccountResult build() {
+            return new CreateAccountResult(this);
         }
     }
 }

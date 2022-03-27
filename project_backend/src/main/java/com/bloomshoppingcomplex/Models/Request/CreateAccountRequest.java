@@ -1,6 +1,5 @@
-package com.bloomshoppingcomplex.Request;
+package com.bloomshoppingcomplex.Models.Request;
 
-import java.util.List;
 import java.util.Objects;
 
 public class CreateAccountRequest {

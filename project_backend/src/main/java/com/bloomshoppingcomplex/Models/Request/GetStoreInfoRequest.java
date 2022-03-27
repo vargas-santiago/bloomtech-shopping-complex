@@ -1,4 +1,4 @@
-package com.bloomshoppingcomplex.Request;
+package com.bloomshoppingcomplex.Models.Request;
 
 import java.util.Objects;
 
