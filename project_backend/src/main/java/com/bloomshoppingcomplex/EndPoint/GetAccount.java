@@ -2,7 +2,6 @@ package com.bloomshoppingcomplex.EndPoint;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.bloomshoppingcomplex.Converter.AccountModelConverter;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;

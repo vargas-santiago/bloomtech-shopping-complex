@@ -2,7 +2,6 @@ package com.bloomshoppingcomplex.EndPoint;
 
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
 import com.bloomshoppingcomplex.Models.AccountModel;
-import com.bloomshoppingcomplex.Converter.AccountModelConverter;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.Request.CreateAccountRequest;

@@ -1,28 +1,59 @@
 Resources:
-  PlaylistsTable:
+  AccountsTable:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        - AttributeName: "id"
+        - AttributeName: "userId"
           AttributeType: "S"
       KeySchema:
-        - AttributeName: "id"
+        - AttributeName: "userId"
           KeyType: "HASH"
       BillingMode: "PAY_PER_REQUEST"
-      TableName: "playlists"
+      TableName: "accounts"
 
-  AlbumTracksTable:
+  StoresTable:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        - AttributeName: "asin"
+        - AttributeName: "storeId"
           AttributeType: "S"
-        - AttributeName: "track_number"
-          AttributeType: "N"
+        - AttributeName: "name"
+          AttributeType: "S"
+        - AttributeName: "categories"
+          AttributeType: "L"
       KeySchema:
-        - AttributeName: "asin"
+        - AttributeName: "storeId"
           KeyType: "HASH"
-        - AttributeName: "track_number"
-          KeyType: "RANGE"
       BillingMode: "PAY_PER_REQUEST"
-      TableName: "album_tracks"
+      TableName: "stores"
+      GlobalSecondaryIndexes:
+        - IndexName: "StoreNameIndex"
+          KeySchema:
+            - AttributeName: "name"
+              KeyType: "HASH"
+          Projection:
+            ProjectionType: "KEYS_ONLY"
+        - IndexName: "StoreCategoryIndex"
+          KeySchema:
+            - AttributeName: "categories"
+              KeyType: "HASH"
+            - AttributeName: "name"
+              KeyType: "RANGE"
+          Projection:
+            ProjectionType: "KEYS_ONLY"
+
+  ItemsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: "itemId"
+          AttributeType: "S"
+        - AttributeName: "storeId"
+          AttributeType: "S"
+        KeySchema:
+          - AttributeName: "itemId"
+            KeyType: "HASH"
+          - AttributeName: "storeId"
+            KeyType: "RANGE"
+        BillingMode: "PAY_PER_REQUEST"
+        TableName: "items"

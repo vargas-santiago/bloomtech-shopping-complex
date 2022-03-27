@@ -1,13 +1,14 @@
 package com.bloomshoppingcomplex.DynamoDB.Models;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.util.List;
 
 @DynamoDBTable(tableName = "stores")
 public class Store {
+    public static final String STORE_NAME_INDEX = "StoreNameIndex";
+    public static final String STORE_CATEGORY_INDEX = "StoreCategoryIndex";
+
     private String storeId;
     private String name;
     private List<String> items;
@@ -25,6 +26,8 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "name")
+    @DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
+    @DynamoDBIndexRangeKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
     public String getName() {
         return name;
     }
@@ -43,6 +46,7 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "categories")
+    @DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_CATEGORY_INDEX, attributeName = "categories")
     public List<String> getCategories() {
         return categories;
     }
