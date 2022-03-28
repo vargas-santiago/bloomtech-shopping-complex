@@ -27,11 +27,11 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
     public CreateAccountResult handleRequest(final CreateAccountRequest createAccountRequest, Context context) {
         log.info("Received CreateAccountRequest {}", createAccountRequest);
 
-        if (AccountUtils.isValidString(createAccountRequest.getUserId())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getUserId())) {
             throw new InvalidCharacterException();
         }
 
-        if (AccountUtils.isValidString(createAccountRequest.getName())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getName())) {
             throw new InvalidCharacterException();
         }
 
