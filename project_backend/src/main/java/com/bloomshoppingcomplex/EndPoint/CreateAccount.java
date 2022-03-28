@@ -1,5 +1,6 @@
 package com.bloomshoppingcomplex.EndPoint;
 
+import com.bloomshoppingcomplex.Converter.ModelConverter;
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
 import com.bloomshoppingcomplex.Models.AccountModel;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
@@ -12,6 +13,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 
 
@@ -19,6 +21,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
     private final Logger log = LogManager.getLogger();
     private final AccountDao accountDao;
 
+    @Inject
     public CreateAccount(AccountDao accountDao) {
         this.accountDao = accountDao;
     }
@@ -43,7 +46,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
 
         this.accountDao.saveAccount(newAccount);
 
-        AccountModel accountModel = new AccountModelConverter().toAccountModel(newAccount);
+        AccountModel accountModel = new ModelConverter().toAccountModel(newAccount);
 
         return CreateAccountResult.builder()
                 .withAccount(accountModel)

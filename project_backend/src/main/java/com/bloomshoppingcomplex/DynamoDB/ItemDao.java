@@ -4,6 +4,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.bloomshoppingcomplex.DynamoDB.Models.Item;
 import com.bloomshoppingcomplex.Exceptions.ItemNotFoundException;
 
+import javax.inject.Inject;
+
 public class ItemDao {
     private final DynamoDBMapper dynamoDbMapper;
 
@@ -12,7 +14,7 @@ public class ItemDao {
      *
      * @param dynamoDbMapper the {@link DynamoDBMapper} used to interact with the items table
      */
-
+    @Inject
     public ItemDao(DynamoDBMapper dynamoDbMapper) {
         this.dynamoDbMapper = dynamoDbMapper;
     }
