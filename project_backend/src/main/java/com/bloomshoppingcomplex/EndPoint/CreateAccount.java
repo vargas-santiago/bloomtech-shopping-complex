@@ -2,11 +2,10 @@ package com.bloomshoppingcomplex.EndPoint;
 
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
 import com.bloomshoppingcomplex.Models.AccountModel;
-import com.bloomshoppingcomplex.Converter.AccountModelConverter;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
-import com.bloomshoppingcomplex.Request.CreateAccountRequest;
-import com.bloomshoppingcomplex.Request.result.CreateAccountResult;
+import com.bloomshoppingcomplex.Models.Request.CreateAccountRequest;
+import com.bloomshoppingcomplex.Models.result.CreateAccountResult;
 import com.bloomshoppingcomplex.Util.AccountUtils;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;

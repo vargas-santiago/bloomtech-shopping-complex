@@ -14,7 +14,7 @@ public class StoreDao {
      *
      * @param dynamoDbMapper the {@link DynamoDBMapper} used to interact with the store table
      */
-
+    @Inject
     public StoreDao(DynamoDBMapper dynamoDbMapper) {
         this.dynamoDbMapper = dynamoDbMapper;
     }
