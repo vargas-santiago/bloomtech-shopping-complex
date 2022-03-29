@@ -50,7 +50,7 @@ form {
     font-family: 'DM Serif Display', serif;
     font-size: 1.35em;
     display: block;
-    text-transform: uppercase;
+    text-shadow: #191919;
     padding: .75em 1em .75em 1.5em;
     margin: 0;
     font-weight: 200;
@@ -58,7 +58,7 @@ form {
 
 input {
     display: block;
-    margin: auto auto;
+    margin: 5px;
     width: 50%;
     margin-bottom: 2em;
     padding: .5em 0;
@@ -66,9 +66,14 @@ input {
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 1.25em;
     color: #757575;
-    justify-content: center;
+    justify-content: left;
     font-family: 'DM Serif Display', serif;
     font-size: medium;
+}
+
+label {
+    font-family: 'DM Serif Display', serif;
+    font-size: Large;
 }
 
 a {

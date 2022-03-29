@@ -35,8 +35,10 @@ sourceSets {
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.7.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+
 
     implementation 'com.google.guava:guava:30.1.1-jre'
 
@@ -46,7 +48,7 @@ dependencies {
     implementation group: 'com.google.dagger', name: 'dagger', version: '2.15'
 
     implementation "com.google.dagger:dagger:2.15"
-    annotationProcessor"com.google.dagger:dagger-compiler:2.15"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.15"
 
     // https://mvnrepository.com/artifact/org.testng/testng
     implementation group: 'org.testng', name: 'testng', version: '6.14.3'
@@ -58,6 +60,7 @@ dependencies {
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'com.amazonaws:aws-lambda-java-events:2.2.9'
     implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.181'
+    implementation 'org.junit.platform:junit-platform-launcher:1.7.2'
     runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.2.0'
 
     // Added for using log4j usage
@@ -67,6 +70,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+
+    //rootDir is project_backend
+    implementation files("$rootDir/src/main/resources/ATAResources.jar")
 
 
 }
