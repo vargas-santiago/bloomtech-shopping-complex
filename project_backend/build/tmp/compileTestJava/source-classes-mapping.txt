@@ -1,0 +1,32 @@
+com/bloomshoppingcomplex/DynamoDB/AccountDaoTest.java
+ com.bloomshoppingcomplex.DynamoDB.AccountDaoTest
+com/bloomshoppingcomplex/EndPoint/UpdateStoreTest.java
+ com.bloomshoppingcomplex.EndPoint.UpdateStoreTest
+com/bloomshoppingcomplex/Helpers/AccountHelper.java
+ com.bloomshoppingcomplex.Helpers.AccountHelper
+com/bloomshoppingcomplex/EndPoint/AddFavoriteTest.java
+ com.bloomshoppingcomplex.EndPoint.AddFavoriteTest
+com/bloomshoppingcomplex/Helpers/ItemHelper.java
+ com.bloomshoppingcomplex.Helpers.ItemHelper
+com/bloomshoppingcomplex/DynamoDB/Models/StoreTest.java
+ com.bloomshoppingcomplex.DynamoDB.Models.StoreTest
+com/bloomshoppingcomplex/Helpers/StoreHelper.java
+ com.bloomshoppingcomplex.Helpers.StoreHelper
+com/bloomshoppingcomplex/DynamoDB/StoreDaoTest.java
+ com.bloomshoppingcomplex.DynamoDB.StoreDaoTest
+com/bloomshoppingcomplex/EndPoint/DeleteFavoriteTest.java
+ com.bloomshoppingcomplex.EndPoint.DeleteFavoriteTest
+com/bloomshoppingcomplex/DynamoDB/Models/AccountTest.java
+ com.bloomshoppingcomplex.DynamoDB.Models.AccountTest
+com/bloomshoppingcomplex/DynamoDB/Models/ItemTest.java
+ com.bloomshoppingcomplex.DynamoDB.Models.ItemTest
+com/bloomshoppingcomplex/EndPoint/GetStoreTest.java
+ com.bloomshoppingcomplex.EndPoint.GetStoreTest
+com/bloomshoppingcomplex/EndPoint/CreateAccountTest.java
+ com.bloomshoppingcomplex.EndPoint.CreateAccountTest
+com/bloomshoppingcomplex/DynamoDB/ItemDaoTest.java
+ com.bloomshoppingcomplex.DynamoDB.ItemDaoTest
+com/bloomshoppingcomplex/EndPoint/UpdateAccountTest.java
+ com.bloomshoppingcomplex.EndPoint.UpdateAccountTest
+com/bloomshoppingcomplex/EndPoint/GetAccountTest.java
+ com.bloomshoppingcomplex.EndPoint.GetAccountTest
