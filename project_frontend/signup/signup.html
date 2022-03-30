@@ -27,11 +27,16 @@
         </div>
         <br>
         <div class="form">
-            <form id="signupSubmit">
-                <input type="text" title="username" placeholder="username" />
-                <input type="text" title="password" placeholder="password" />
-                <input type="text" title="name" placeholder="name" />
-                <input type="text" title="email" placeholder="email" />
+            <form>
+                <label for="username"><b>Username:</b></label>
+                <input type="text" id="username" required placeholder="username"/>
+
+                <label for="password"><b>Password:</b></label>
+                <input type="text" id="password" required placeholder="password"/>
+
+                <label for="email"><b>Email:</b></label>
+                <input type="text" id="email" required placeholder="email" />
+
                 <button type="submit" class="btn" onclick="submit()">Submit</button>
             </form>
         </div>

@@ -3,38 +3,33 @@ package com.bloomshoppingcomplex.Converter;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.DynamoDB.Models.Store;
 import com.bloomshoppingcomplex.Models.AccountModel;
-import com.beust.jcommander.internal.Lists;
 import com.bloomshoppingcomplex.Models.StoreModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ModelConverter {
     public AccountModel toAccountModel(Account account) {
 
-        List<String> favorites = new ArrayList<>();
+        List<String> favorites = null;
 
-        if (account.getFavorites() == null) {
-            favorites = null;
-        } else {
-            favorites = Lists.newArrayList(favorites);
+        if (account.getFavorites() != null) {
+            favorites = account.getFavorites();
         }
 
         return AccountModel.builder()
                 .withUserId(account.getUserId())
-                .withName(account.getName())
+                .withUsername(account.getUsername())
+                .withPassword(account.getPassword())
                 .withEmail(account.getEmail())
                 .withFavorites(favorites)
                 .build();
     }
 
     public StoreModel toStoreModel (Store store) {
-        List<String> categories = new ArrayList<>();
+        List<String> categories = null;
 
-        if (store.getCategories() == null) {
-            categories = null;
-        } else {
-            categories = Lists.newArrayList(categories);
+        if (store.getCategories() != null){
+            categories = store.getCategories();
         }
 
         return StoreModel.builder()

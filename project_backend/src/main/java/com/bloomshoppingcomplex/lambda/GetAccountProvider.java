@@ -8,9 +8,9 @@ import com.bloomshoppingcomplex.dependency.DaggerServiceComponent;
 import com.bloomshoppingcomplex.dependency.ServiceComponent;
 
 public class GetAccountProvider implements RequestHandler<GetAccountRequest, GetAccountResult>{
-        private static final ServiceComponent dagger = DaggerServiceComponent.create();
+    private static final ServiceComponent dagger = DaggerServiceComponent.create();
 
-        public GetAccountProvider() {}
+    public GetAccountProvider() {}
 
     @Override
     public GetAccountResult handleRequest(GetAccountRequest getAccountRequest, Context context) {

@@ -28,7 +28,7 @@ public class StoreDao {
     public Store getStore(String storeId) {
         Store store = this.dynamoDbMapper.load(Store.class, storeId);
 
-        if (storeId == null) {
+        if (store == null) {
             throw new StoreNotFoundException("Could not find store with id " + storeId);
         }
 
@@ -38,6 +38,11 @@ public class StoreDao {
 
     public Store saveStore(Store store) {
         this.dynamoDbMapper.save(store);
+        return store;
+    }
+
+    public Store deleteStore(Store store) {
+        this.dynamoDbMapper.delete(store);
         return store;
     }
 }

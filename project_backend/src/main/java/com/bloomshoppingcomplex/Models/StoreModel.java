@@ -1,5 +1,7 @@
 package com.bloomshoppingcomplex.Models;
 
+import com.bloomshoppingcomplex.DynamoDB.Models.Store;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -10,9 +12,7 @@ public class StoreModel {
     private List<String> categories;
     private int popularity;
 
-    public StoreModel() {
-
-    }
+    public StoreModel() {}
 
     public StoreModel(Builder builder) {
         this.storeId = builder.storeId;
@@ -20,6 +20,18 @@ public class StoreModel {
         this.items = builder.items;
         this.categories = builder.categories;
         this.popularity = builder.popularity;
+    }
+
+    public Store toStore() {
+        Store store = new Store();
+
+        store.setStoreId(this.storeId);
+        store.setName(this.name);
+        store.setItems(this.items);
+        store.setCategories(this.categories);
+        store.setPopularity(this.popularity);
+
+        return store;
     }
 
     public String getStoreId() {

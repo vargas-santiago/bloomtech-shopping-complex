@@ -8,8 +8,13 @@ import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
 import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;
 import com.bloomshoppingcomplex.Models.AccountModel;
+<<<<<<< HEAD
 import com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest;
 import com.bloomshoppingcomplex.Request.result.UpdateAccountResult;
+=======
+import com.bloomshoppingcomplex.Models.result.UpdateAccountResult;
+import com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest;
+>>>>>>> 15cc05d61fcf14dd27fe90316db5287363210205
 import com.bloomshoppingcomplex.Util.AccountUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,7 +34,9 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
     public UpdateAccountResult handleRequest(UpdateAccountRequest updateAccountRequest, Context context) {
         log.info("Received UpdatedAccountRequest {} ", updateAccountRequest);
 
-        if (updateAccountRequest.getUserId() == null) {
+        Account updateAccount = accountDao.getAccount(updateAccountRequest.getUserId());
+
+        if (updateAccount == null) {
             throw new UserNotFoundException();
         }
 
@@ -37,7 +44,7 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
             throw new InvalidCharacterException();
         }
 
-        if (!AccountUtils.isValidString(updateAccountRequest.getName())) {
+        if (!AccountUtils.isValidString(updateAccountRequest.getUsername())) {
             throw new InvalidCharacterException();
         }
 
@@ -45,13 +52,13 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
             throw new InvalidCharacterException();
         }
 
-        Account updateAccount = accountDao.getAccount(updateAccountRequest.getUserId());
+
 
         if (!updateAccountRequest.getUserId().equals(updateAccount.getUserId())) {
             throw new UserNotFoundException();
         }
 
-        updateAccount.setName(updateAccountRequest.getName());
+        updateAccount.setUsername(updateAccountRequest.getUsername());
         updateAccount.setEmail(updateAccountRequest.getEmail());
 
         this.accountDao.saveAccount(updateAccount);
@@ -59,7 +66,7 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
         AccountModel updatedAccount = new ModelConverter().toAccountModel(updateAccount);
 
         return UpdateAccountResult.builder()
-                .withAccount(updatedAccount)
+                .withAccountModel(updatedAccount)
                 .build();
     }
 }

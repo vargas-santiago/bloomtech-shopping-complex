@@ -33,14 +33,21 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
             throw new InvalidCharacterException();
         }
 
-        if (!AccountUtils.isValidString(createAccountRequest.getName())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getUsername())) {
             throw new InvalidCharacterException();
         }
 
         Account newAccount = new Account();
 
+        String userId = AccountUtils.generateUserId();
+
+        while (accountDao.doesAccountExist(userId) == true) {
+            userId = AccountUtils.generateUserId();
+        }
+
         newAccount.setUserId(AccountUtils.generateUserId());
-        newAccount.setName(createAccountRequest.getName());
+        newAccount.setUsername(createAccountRequest.getUsername());
+        newAccount.setPassword(createAccountRequest.getPassword());
         newAccount.setEmail(createAccountRequest.getEmail());
         newAccount.setFavorites(new ArrayList<>());
 
@@ -49,7 +56,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
         AccountModel accountModel = new ModelConverter().toAccountModel(newAccount);
 
         return CreateAccountResult.builder()
-                .withAccount(accountModel)
+                .withAccountModel(accountModel)
                 .build();
     }
 }

@@ -1,20 +1,20 @@
-package com.bloomshoppingcomplex.Request.result;
+package com.bloomshoppingcomplex.Models.result;
 
 import com.bloomshoppingcomplex.Models.AccountModel;
 
 public class UpdateAccountResult {
-    private AccountModel account;
+    private AccountModel accountModel;
 
     public UpdateAccountResult(Builder builder) {
-        this.account = builder.account;
+        this.accountModel = builder.accountModel;
     }
 
-    public AccountModel getAccount() {
-        return account;
+    public AccountModel getAccountModel() {
+        return accountModel;
     }
 
-    public void setAccount(AccountModel account) {
-        this.account = account;
+    public void setAccountModel(AccountModel accountModel) {
+        this.accountModel = accountModel;
     }
 
     public static Builder builder() {
@@ -22,10 +22,10 @@ public class UpdateAccountResult {
     }
 
     public static final class Builder {
-        private AccountModel account;
+        private AccountModel accountModel;
 
-        public Builder withAccount(AccountModel accountToUse) {
-            this.account = accountToUse;
+        public Builder withAccountModel(AccountModel accountModel) {
+            this.accountModel = accountModel;
             return this;
         }
 
