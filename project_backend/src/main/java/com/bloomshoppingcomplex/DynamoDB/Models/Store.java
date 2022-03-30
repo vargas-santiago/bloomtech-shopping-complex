@@ -3,6 +3,7 @@ package com.bloomshoppingcomplex.DynamoDB.Models;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @DynamoDBTable(tableName = "stores")
 public class Store {
@@ -26,8 +27,8 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "name")
-    @DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
-    @DynamoDBIndexRangeKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
+    //@DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
+    //@DynamoDBIndexRangeKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
     public String getName() {
         return name;
     }
@@ -46,7 +47,7 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "categories")
-    @DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_CATEGORY_INDEX, attributeName = "categories")
+    //@DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_CATEGORY_INDEX, attributeName = "categories")
     public List<String> getCategories() {
         return categories;
     }
@@ -63,4 +64,28 @@ public class Store {
         this.popularity = popularity;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Store that = (Store) o;
+        return Objects.equals(this.getStoreId(), that.getStoreId()) && Objects.equals(this.getName(), that.getName()) && Objects.equals(this.getItems(), that.getItems()) && Objects.equals(this.getCategories(), that.getCategories()) && Objects.equals(this.getPopularity(), that.getPopularity());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStoreId(), getName(), getItems(), getCategories(), getPopularity());
+    }
+
+    @Override
+    public String toString() {
+        return "Account {" +
+                "storeId='" + storeId + '\'' +
+                ", name='" + name + '\'' +
+                ", items='" + items + '\'' +
+                ", categories='" + categories + '\'' +
+                ", popularity='" + popularity + '\'' +
+                '}';
+    }
 }
