@@ -8,7 +8,7 @@ import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
 import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;
 import com.bloomshoppingcomplex.Models.AccountModel;
-import com.bloomshoppingcomplex.Request.UpdateAccountRequest;
+import com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest;
 import com.bloomshoppingcomplex.Request.result.UpdateAccountResult;
 import com.bloomshoppingcomplex.Util.AccountUtils;
 import org.apache.logging.log4j.LogManager;
