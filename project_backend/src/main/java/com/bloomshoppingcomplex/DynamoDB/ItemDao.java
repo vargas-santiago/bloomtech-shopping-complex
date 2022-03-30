@@ -39,4 +39,9 @@ public class ItemDao {
         this.dynamoDbMapper.save(saveItem);
         return saveItem;
     }
+
+    public Item deleteItem(Item deleteItem) {
+        this.dynamoDbMapper.delete(deleteItem);
+        return deleteItem;
+    }
 }
