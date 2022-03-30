@@ -4,20 +4,20 @@ import java.util.Objects;
 
 public class UpdateAccountRequest {
     private String userId;
-    private String name;
+    private String username;
     private String email;
 
     public UpdateAccountRequest() {}
 
-    public UpdateAccountRequest(String userId, String name, String email) {
+    public UpdateAccountRequest(String userId, String username, String email) {
         this.userId = userId;
-        this.name = name;
+        this.username = username;
         this.email = email;
     }
 
     public UpdateAccountRequest(Builder builder) {
         this.userId = builder.userId;
-        this.name = builder.name;
+        this.username = builder.username;
         this.email = builder.email;
     }
 
@@ -29,12 +29,12 @@ public class UpdateAccountRequest {
         this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -50,19 +50,19 @@ public class UpdateAccountRequest {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UpdateAccountRequest that = (UpdateAccountRequest) o;
-        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getName(), that.getName()) && Objects.equals(getEmail(), that.getEmail());
+        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getUsername(), that.getUsername()) && Objects.equals(getEmail(), that.getEmail());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getName(), getEmail());
+        return Objects.hash(getUserId(), getUsername(), getEmail());
     }
 
     @Override
     public String toString() {
         return "UpdateAccountRequest{" +
                 "userId='" + userId + '\'' +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
@@ -73,7 +73,7 @@ public class UpdateAccountRequest {
 
     public static final class Builder {
         private String userId;
-        private String name;
+        private String username;
         private String email;
 
         private Builder() {}
@@ -83,8 +83,8 @@ public class UpdateAccountRequest {
             return this;
         }
 
-        public Builder withName(String nameToUse) {
-            this.name = nameToUse;
+        public Builder withUsername(String usernameToUse) {
+            this.username = usernameToUse;
             return this;
         }
 
