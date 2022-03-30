@@ -4,34 +4,23 @@ import java.util.Objects;
 
 public class CreateAccountRequest {
     private String userId;
-    //private List<String> favorites;
     private String username;
     private String password;
     private String email;
 
     public CreateAccountRequest(String userId, String username, String password, String email) {
         this.userId = userId;
-<<<<<<< HEAD
-        this.name = name;
-=======
-        //this.favorites = favorites;
         this.username = username;
         this.password = password;
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
         this.email = email;
     }
 
     public CreateAccountRequest() {}
 
     public CreateAccountRequest(Builder builder) {
-<<<<<<< HEAD
         this.userId = builder.userId;
-        this.name = builder.name;
-=======
-        this.userId = builder().userId;
         this.username = builder.username;
         this.password = builder.password;
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
         this.email = builder.email;
     }
 
@@ -44,22 +33,8 @@ public class CreateAccountRequest {
         this.userId = userId;
     }
 
-<<<<<<< HEAD
-    public String getName() {
-        return name;
-=======
-
-//    public List<String> getFavorites() {
-//        return favorites;
-//    }
-
-//    public void setFavorites(List<String> favorites) {
-//        this.favorites = favorites;
-//    }
-
     public String getUsername() {
         return username;
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
     }
 
     public void setUsername(String username) {

@@ -3,21 +3,21 @@ package com.bloomshoppingcomplex.Models.result;
 import com.bloomshoppingcomplex.Models.StoreModel;
 
 public class GetStoreResult {
-    private StoreModel store;
+    private StoreModel storeModel;
 
-    public GetStoreResult(Builder builder) { this.store = builder.store; }
+    public GetStoreResult(Builder builder) { this.storeModel = builder.storeModel; }
 
-    public StoreModel getStore() { return store; }
+    public StoreModel getStoreModel() { return storeModel; }
 
-    public void setStore(StoreModel store) { this.store = store; }
+    public void setStoreModel(StoreModel storeModel) { this.storeModel = storeModel; }
 
     public static Builder builder() { return new Builder(); }
 
     public static final class Builder {
-        private StoreModel store;
+        private StoreModel storeModel;
 
-        public Builder withStore(StoreModel storeToUse) {
-            this.store = storeToUse;
+        public Builder withStoreModel(StoreModel storeModel) {
+            this.storeModel = storeModel;
             return this;
         }
 

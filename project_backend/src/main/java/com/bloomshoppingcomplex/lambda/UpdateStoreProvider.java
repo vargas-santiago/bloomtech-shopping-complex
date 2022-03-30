@@ -7,20 +7,14 @@ import com.bloomshoppingcomplex.Models.result.UpdateStoreResult;
 import com.bloomshoppingcomplex.dependency.DaggerServiceComponent;
 import com.bloomshoppingcomplex.dependency.ServiceComponent;
 
-import java.security.Provider;
-
 public class UpdateStoreProvider implements RequestHandler<UpdateStoreRequest, UpdateStoreResult> {
+    private static final ServiceComponent dagger = DaggerServiceComponent.create();
 
-    public UpdateStoreProvider() {
-
-    }
+    public UpdateStoreProvider() {}
 
     @Override
     public UpdateStoreResult handleRequest(final UpdateStoreRequest updateStoreRequest, Context context) {
-        return getServiceComponent().provideUpdateStore().handleRequest(updateStoreRequest, context);
+        return dagger.provideUpdateStore().handleRequest(updateStoreRequest, context);
     }
 
-    private ServiceComponent getServiceComponent() {
-        return DaggerServiceComponent.create();
-    }
 }

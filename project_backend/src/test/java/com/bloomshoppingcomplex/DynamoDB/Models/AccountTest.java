@@ -17,6 +17,7 @@ public class AccountTest {
 
         for (int i = 0; i < accounts.size(); i++) {
             accounts2.get(i).setUserId(accounts.get(i).getUserId());
+            accounts2.get(i).setPassword(accounts.get(i).getPassword());
         }
 
         for (int i = 0; i < accounts.size(); i++) {

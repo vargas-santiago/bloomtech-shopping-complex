@@ -52,9 +52,9 @@ public class UpdateStoreTest {
         DynamoDBMapper mapper = new DynamoDBMapper(client, mapperConfig);
         DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
 
-        List<Store> accountsResult = mapper.scan(Store.class, scanExpression);
+        List<Store> storeResults = mapper.scan(Store.class, scanExpression);
 
-        for (Store store : accountsResult) {
+        for (Store store : storeResults) {
             storeDao.deleteStore(store);
         }
     }
@@ -102,7 +102,7 @@ public class UpdateStoreTest {
             boolean storesUpdates = false;
             UpdateStoreResult getAccountResult = updateStore.handleRequest(updateStoreRequests.get(i), null);
 
-            if (storeDao.getStore(getAccountResult.getStore().getStoreId()).equals(stores2.get(i))) {
+            if (storeDao.getStore(getAccountResult.getStoreModel().getStoreId()).equals(stores2.get(i))) {
                 storesUpdates = true;
             }
 

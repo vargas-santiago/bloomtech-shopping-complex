@@ -3,29 +3,23 @@ package com.bloomshoppingcomplex.Models.result;
 import com.bloomshoppingcomplex.Models.StoreModel;
 
 public class UpdateStoreResult {
-    private StoreModel store;
+    private StoreModel storeModel;
 
-    public UpdateStoreResult(Builder builder) { this.store = builder.store; }
+    public UpdateStoreResult(Builder builder) { this.storeModel = builder.storeModel; }
 
-    public StoreModel getStore() { return store; }
+    public StoreModel getStoreModel() { return storeModel; }
 
-<<<<<<< HEAD
-    public void setStoreModel(StoreModel store) { this.store = store; }
-=======
-    public void setStore(StoreModel store) { this.store = store; }
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
+    public void setStoreModel(StoreModel storeModel) { this.storeModel = storeModel; }
+
+    public void setStore(StoreModel store) { this.storeModel = storeModel; }
 
     public static Builder builder() { return new Builder(); }
 
     public static final class Builder {
-        private StoreModel store;
+        private StoreModel storeModel;
 
-<<<<<<< HEAD
-        public Builder withStoreModel(StoreModel storeToUse) {
-=======
-        public Builder withStore(StoreModel storeToUse) {
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
-            this.store = storeToUse;
+        public Builder withStoreModel(StoreModel storeModel) {
+            this.storeModel = storeModel;
             return this;
         }
 

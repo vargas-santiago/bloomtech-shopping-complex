@@ -14,6 +14,5 @@ public class DaoModule {
     @Singleton
     public DynamoDBMapper provideDynamoDBMapper() {
         return new DynamoDBMapper(DynamoDbClientProvider.getDynamoDBClient(Regions.US_WEST_2));
-        //return null;
     }
 }

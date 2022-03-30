@@ -1,21 +1,20 @@
 package com.bloomshoppingcomplex.Models.result;
 
-
 import com.bloomshoppingcomplex.Models.AccountModel;
 
 public class AddFavoriteResult {
-    private AccountModel account;
+    private AccountModel accountModel;
 
     public AddFavoriteResult(Builder builder) {
-        this.account = builder.account;
+        this.accountModel = builder.accountModel;
     }
 
-    public AccountModel getAccount() {
-        return account;
+    public AccountModel getAccountModel() {
+        return accountModel;
     }
 
-    public void setAccount(AccountModel account) {
-        this.account = account;
+    public void setAccountModel(AccountModel accountModel) {
+        this.accountModel = accountModel;
     }
 
     public static Builder builder() {
@@ -23,10 +22,10 @@ public class AddFavoriteResult {
     }
 
     public static final class Builder {
-        private AccountModel account;
+        private AccountModel accountModel;
 
-        public Builder withAccount(AccountModel account) {
-            this.account = account;
+        public Builder withAccountModel(AccountModel accountModel) {
+            this.accountModel = accountModel;
             return this;
         }
 

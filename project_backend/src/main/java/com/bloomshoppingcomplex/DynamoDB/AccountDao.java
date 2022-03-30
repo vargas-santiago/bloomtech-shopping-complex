@@ -26,6 +26,7 @@ public class AccountDao {
         if (account == null) {
             throw new UserNotFoundException();
         }
+
         return account;
     }
 

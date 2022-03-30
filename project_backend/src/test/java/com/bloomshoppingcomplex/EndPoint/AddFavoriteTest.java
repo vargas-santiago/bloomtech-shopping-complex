@@ -101,7 +101,7 @@ public class AddFavoriteTest {
             AddFavoriteResult addFavoriteResult = addFavorite.handleRequest(addFavoriteRequests.get(i), null);
 
             if (i+1 % 3 == 0) {
-                List<String> accountSavedFavorites = accountDao.getAccount(addFavoriteResult.getAccount().getUserId()).getFavorites();
+                List<String> accountSavedFavorites = accountDao.getAccount(addFavoriteResult.getAccountModel().getUserId()).getFavorites();
 
                 assertEquals(accountSavedFavorites, accounts.get(i).getFavorites());
             }

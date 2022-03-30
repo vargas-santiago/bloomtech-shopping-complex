@@ -1,6 +1,5 @@
 package com.bloomshoppingcomplex.Models.Request;
 
-import java.util.List;
 import java.util.Objects;
 
 public class GetStoreRequest {
@@ -33,7 +32,7 @@ public class GetStoreRequest {
 
     @Override
     public String toString() {
-        return "GetStoreInfoRequest{" +
+        return "GetStoreRequest{" +
                 "storeId='" + storeId + '\'' +
                 '}';
     }

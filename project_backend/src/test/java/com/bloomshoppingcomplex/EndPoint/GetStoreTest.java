@@ -55,9 +55,9 @@ public class GetStoreTest {
         DynamoDBMapper mapper = new DynamoDBMapper(client, mapperConfig);
         DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
 
-        List<Store> accountsResult = mapper.scan(Store.class, scanExpression);
+        List<Store> storeResults = mapper.scan(Store.class, scanExpression);
 
-        for (Store store : accountsResult) {
+        for (Store store : storeResults) {
             storeDao.deleteStore(store);
         }
     }
@@ -86,7 +86,7 @@ public class GetStoreTest {
             boolean storesEqual = false;
             GetStoreResult getAccountResult = getStore.handleRequest(getStoreRequests.get(i), null);
 
-            if (getAccountResult.getStore().toStore().equals(stores.get(i))) {
+            if (getAccountResult.getStoreModel().toStore().equals(stores.get(i))) {
                 storesEqual = true;
             }
 

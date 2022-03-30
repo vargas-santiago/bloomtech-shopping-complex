@@ -105,7 +105,7 @@ public class DeleteFavoriteTest {
 
             if (i+1 % 3 == 0) {
                 boolean storesInRequestRemoved = true;
-                List<String> accountSavedFavorites = accountDao.getAccount(deleteFavoriteResult.getAccount().getUserId()).getFavorites();
+                List<String> accountSavedFavorites = accountDao.getAccount(deleteFavoriteResult.getAccountModel().getUserId()).getFavorites();
 
                 if (accountSavedFavorites.contains(stores.get(0)) && accountSavedFavorites.contains(stores.get(1)) && accountSavedFavorites.contains(stores.get(2))) {
                     storesInRequestRemoved = false;

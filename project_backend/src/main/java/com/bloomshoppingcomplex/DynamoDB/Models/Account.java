@@ -61,12 +61,12 @@ public class Account {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account that = (Account) o;
-        return Objects.equals(this.getUserId(), that.getUserId()) && Objects.equals(this.getName(), that.getName()) && Objects.equals(this.getEmail(), that.getEmail()) && Objects.equals(this.getFavorites(), that.getFavorites());
+        return Objects.equals(this.getUserId(), that.getUserId()) && Objects.equals(this.getUsername(), that.getUsername()) && Objects.equals(this.getEmail(), that.getEmail()) && Objects.equals(this.getFavorites(), that.getFavorites()) && Objects.equals(this.getPassword(), that.getPassword());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getName(), getEmail(), getFavorites());
+        return Objects.hash(getUserId(), getUsername(), getEmail(), getFavorites());
     }
 
     @Override
@@ -74,8 +74,9 @@ public class Account {
         return "Account {" +
                 "userId='" + userId + '\'' +
                 ", favorites='" + favorites + '\'' +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

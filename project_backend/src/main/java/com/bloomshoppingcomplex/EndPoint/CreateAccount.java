@@ -2,7 +2,6 @@ package com.bloomshoppingcomplex.EndPoint;
 
 import com.bloomshoppingcomplex.Converter.ModelConverter;
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
-import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;
 import com.bloomshoppingcomplex.Models.AccountModel;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
@@ -34,11 +33,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
             throw new InvalidCharacterException();
         }
 
-<<<<<<< HEAD
-        if (!AccountUtils.isValidString(createAccountRequest.getName())) {
-=======
         if (!AccountUtils.isValidString(createAccountRequest.getUsername())) {
->>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
             throw new InvalidCharacterException();
         }
 
@@ -61,7 +56,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
         AccountModel accountModel = new ModelConverter().toAccountModel(newAccount);
 
         return CreateAccountResult.builder()
-                .withAccount(accountModel)
+                .withAccountModel(accountModel)
                 .build();
     }
 }

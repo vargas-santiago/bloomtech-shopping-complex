@@ -26,7 +26,7 @@ public class AccountModel {
         Account account = new Account();
         account.setUserId(this.userId);
         account.setFavorites(this.favorites);
-        account.setName(this.name);
+        account.setUsername(this.username);
         account.setEmail(this.email);
 
         return account;

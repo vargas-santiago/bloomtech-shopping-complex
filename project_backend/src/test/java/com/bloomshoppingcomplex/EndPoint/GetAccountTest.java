@@ -14,6 +14,7 @@ import com.bloomshoppingcomplex.Helpers.AccountHelper;
 import com.bloomshoppingcomplex.Models.Request.CreateAccountRequest;
 import com.bloomshoppingcomplex.Models.Request.GetAccountRequest;
 import com.bloomshoppingcomplex.Models.result.GetAccountResult;
+import org.apache.commons.codec.binary.BaseNCodecOutputStream;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -80,6 +81,9 @@ public class GetAccountTest {
         for (int i = 0; i < getAccountRequests.size(); i++) {
             boolean accountsEqual = false;
             GetAccountResult getAccountResult = getAccount.handleRequest(getAccountRequests.get(i), null);
+
+            Account account = accounts.get(i);
+            account.setPassword(null);
 
             if (getAccountResult.getAccountModel().toAccount().equals(accounts.get(i))) {
                 accountsEqual = true;

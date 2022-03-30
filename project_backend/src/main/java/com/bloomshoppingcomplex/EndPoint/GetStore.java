@@ -36,7 +36,7 @@ public class GetStore implements RequestHandler<GetStoreRequest, GetStoreResult>
         StoreModel storeModel = new ModelConverter().toStoreModel(store);
 
         return GetStoreResult.builder()
-                .withStore(storeModel)
+                .withStoreModel(storeModel)
                 .build();
     }
 }

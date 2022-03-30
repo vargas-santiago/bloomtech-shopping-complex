@@ -1,21 +1,20 @@
 package com.bloomshoppingcomplex.Models.result;
 
-
 import com.bloomshoppingcomplex.Models.AccountModel;
 
 public class DeleteFavoriteResult {
-    private AccountModel account;
+    private AccountModel accountModel;
 
     public DeleteFavoriteResult(Builder builder) {
-        this.account = builder.account;
+        this.accountModel = builder.accountModel;
     }
 
-    public AccountModel getAccount() {
-        return account;
+    public AccountModel getAccountModel() {
+        return accountModel;
     }
 
-    public void setAccount(AccountModel account) {
-        this.account = account;
+    public void setAccount(AccountModel accountModel) {
+        this.accountModel = accountModel;
     }
 
     public static Builder builder() {
@@ -23,10 +22,10 @@ public class DeleteFavoriteResult {
     }
 
     public static final class Builder {
-        private AccountModel account;
+        private AccountModel accountModel;
 
-        public Builder withAccount(AccountModel account) {
-            this.account = account;
+        public Builder withAccountModel(AccountModel accountModel) {
+            this.accountModel = accountModel;
             return this;
         }
 

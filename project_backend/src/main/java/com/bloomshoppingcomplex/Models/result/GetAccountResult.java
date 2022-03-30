@@ -3,18 +3,18 @@ package com.bloomshoppingcomplex.Models.result;
 import com.bloomshoppingcomplex.Models.AccountModel;
 
 public class GetAccountResult {
-    private AccountModel account;
+    private AccountModel accountModel;
 
     public GetAccountResult(Builder builder) {
-        this.account = builder.account;
+        this.accountModel = builder.accountModel;
     }
 
     public AccountModel getAccountModel() {
-        return account;
+        return accountModel;
     }
 
-    public void setAccount(AccountModel account) {
-        this.account = account;
+    public void setAccountModel(AccountModel accountModel) {
+        this.accountModel = accountModel;
     }
 
     public static Builder builder() {
@@ -22,10 +22,10 @@ public class GetAccountResult {
     }
 
     public static final class Builder {
-        private AccountModel account;
+        private AccountModel accountModel;
 
-        public Builder withAccountModel(AccountModel accountToUse) {
-            this.account = accountToUse;
+        public Builder withAccountModel(AccountModel accountModel) {
+            this.accountModel = accountModel;
             return this;
         }
 

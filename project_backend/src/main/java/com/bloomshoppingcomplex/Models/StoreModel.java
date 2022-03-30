@@ -12,9 +12,7 @@ public class StoreModel {
     private List<String> categories;
     private int popularity;
 
-    public StoreModel() {
-
-    }
+    public StoreModel() {}
 
     public StoreModel(Builder builder) {
         this.storeId = builder.storeId;

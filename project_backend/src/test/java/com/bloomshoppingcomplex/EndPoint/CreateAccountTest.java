@@ -66,7 +66,8 @@ public class CreateAccountTest {
             CreateAccountRequest request = new CreateAccountRequest().builder()
                     .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
-                    .withName(account.getName())
+                    .withUsername(account.getUsername())
+                    .withPassword(account.getPassword())
                     .build();
 
             createAccountRequests.add(request);
@@ -76,7 +77,7 @@ public class CreateAccountTest {
             boolean accountCreated = false;
             CreateAccountResult createAccountResult = createAccount.handleRequest(createAccountRequests.get(i), null);
 
-            if (accountDao.getAccount(createAccountResult.getAccount().getUserId()) != null) {
+            if (accountDao.getAccount(createAccountResult.getAccountModel().getUserId()) != null) {
                 accountCreated = true;
             }
 
@@ -95,7 +96,7 @@ public class CreateAccountTest {
             CreateAccountRequest request = new CreateAccountRequest().builder()
                     .withUserId("'")
                     .withEmail(account.getEmail())
-                    .withName(account.getName())
+                    .withUsername(account.getUsername())
                     .build();
 
             createAccountRequests.add(request);
@@ -117,7 +118,7 @@ public class CreateAccountTest {
             CreateAccountRequest request = new CreateAccountRequest().builder()
                     .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
-                    .withName("'")
+                    .withUsername("'")
                     .build();
 
             createAccountRequests.add(request);
