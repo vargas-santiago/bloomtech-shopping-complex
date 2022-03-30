@@ -29,10 +29,14 @@ form {
     font-family: 'DM Serif Display', serif;
     font-size: 1.35em;
     display: block;
-    text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
     margin: 0;
     font-weight: 200;
+}
+
+label {
+    font-family: 'DM Serif Display', serif;
+    font-size: medium;
 }
 
 input {
@@ -47,7 +51,7 @@ input {
     color: #757575;
     justify-content: center;
     font-family: 'DM Serif Display', serif;
-    font-size: medium;
+    font-size: small;
 }
 
 .btn {

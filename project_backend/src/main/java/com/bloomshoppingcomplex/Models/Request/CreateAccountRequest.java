@@ -5,13 +5,15 @@ import java.util.Objects;
 public class CreateAccountRequest {
     private String userId;
     //private List<String> favorites;
-    private String name;
+    private String username;
+    private String password;
     private String email;
 
-    public CreateAccountRequest(String userId, String name, String email) {
+    public CreateAccountRequest(String userId, String username, String password, String email) {
         this.userId = userId;
         //this.favorites = favorites;
-        this.name = name;
+        this.username = username;
+        this.password = password;
         this.email = email;
     }
 
@@ -19,7 +21,8 @@ public class CreateAccountRequest {
 
     public CreateAccountRequest(Builder builder) {
         this.userId = builder().userId;
-        this.name = builder.name;
+        this.username = builder.username;
+        this.password = builder.password;
         this.email = builder.email;
     }
 
@@ -41,12 +44,18 @@ public class CreateAccountRequest {
 //        this.favorites = favorites;
 //    }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -60,21 +69,22 @@ public class CreateAccountRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof CreateAccountRequest)) return false;
         CreateAccountRequest that = (CreateAccountRequest) o;
-        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getName(), that.getName()) && Objects.equals(getEmail(), that.getEmail());
+        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getUsername(), that.getUsername()) && Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getEmail(), that.getEmail());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getName(), getEmail());
+        return Objects.hash(getUserId(), getUsername(), getPassword(), getEmail());
     }
 
     @Override
     public String toString() {
         return "CreateAccountRequest{" +
                 "userId='" + userId + '\'' +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
@@ -85,7 +95,8 @@ public class CreateAccountRequest {
 
     public static final class Builder {
         private String userId;
-        private String name;
+        private String username;
+        private String password;
         private String email;
 
         private Builder() {
@@ -97,8 +108,13 @@ public class CreateAccountRequest {
             return this;
         }
 
-        public Builder withName(String nameToUse) {
-            this.name = nameToUse;
+        public Builder withUsername(String usernameToUse) {
+            this.username = usernameToUse;
+            return this;
+        }
+
+        public Builder withPassword(String passwordToUse) {
+            this.password = passwordToUse;
             return this;
         }
 

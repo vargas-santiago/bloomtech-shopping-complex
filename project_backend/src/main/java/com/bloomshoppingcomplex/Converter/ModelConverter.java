@@ -22,7 +22,8 @@ public class ModelConverter {
 
         return AccountModel.builder()
                 .withUserId(account.getUserId())
-                .withName(account.getName())
+                .withUsername(account.getUsername())
+                .withPassword(account.getPassword())
                 .withEmail(account.getEmail())
                 .withFavorites(favorites)
                 .build();

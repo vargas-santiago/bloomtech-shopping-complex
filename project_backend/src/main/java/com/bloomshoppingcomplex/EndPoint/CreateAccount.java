@@ -33,14 +33,15 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
             throw new InvalidCharacterException();
         }
 
-        if (!AccountUtils.isValidString(createAccountRequest.getName())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getUsername())) {
             throw new InvalidCharacterException();
         }
 
         Account newAccount = new Account();
 
         newAccount.setUserId(AccountUtils.generateUserId());
-        newAccount.setName(createAccountRequest.getName());
+        newAccount.setUsername(createAccountRequest.getUsername());
+        newAccount.setPassword(createAccountRequest.getPassword());
         newAccount.setEmail(createAccountRequest.getEmail());
         newAccount.setFavorites(new ArrayList<>());
 

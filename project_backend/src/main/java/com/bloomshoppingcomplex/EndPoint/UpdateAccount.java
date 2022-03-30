@@ -51,7 +51,7 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
             throw new UserNotFoundException();
         }
 
-        updateAccount.setName(updateAccountRequest.getName());
+        updateAccount.setUsername(updateAccountRequest.getName());
         updateAccount.setEmail(updateAccountRequest.getEmail());
 
         this.accountDao.saveAccount(updateAccount);
