@@ -8,8 +8,9 @@ import java.util.Objects;
 @DynamoDBTable(tableName = "accounts")
 public class Account {
     private String userId;
+    private String password;
     private List<String> favorites;
-    private String name;
+    private String username;
     private String email;
 
 
@@ -22,13 +23,18 @@ public class Account {
         this.userId = userId;
     }
 
+    @DynamoDBAttribute(attributeName = "password")
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
+
     @DynamoDBAttribute(attributeName = "name")
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @DynamoDBAttribute(attributeName = "email")

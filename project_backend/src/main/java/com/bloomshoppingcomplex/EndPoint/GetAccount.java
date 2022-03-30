@@ -10,10 +10,12 @@ import com.bloomshoppingcomplex.Models.AccountModel;
 import com.bloomshoppingcomplex.Models.Request.GetAccountRequest;
 import com.bloomshoppingcomplex.Models.result.GetAccountResult;
 
+import javax.inject.Inject;
+
 public class GetAccount implements RequestHandler<GetAccountRequest, GetAccountResult> {
     private final AccountDao accountDao;
 
-
+    @Inject
     public GetAccount(AccountDao accountDao) {
         this.accountDao = accountDao;
     }

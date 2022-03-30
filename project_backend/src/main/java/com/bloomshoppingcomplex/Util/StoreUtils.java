@@ -28,7 +28,7 @@ public class StoreUtils {
         return !INVALID_CHARACTER_PATTERN.matcher(stringToValidate).find();
     }
 
-    public static String generatePlaylistId() {
+    public static String generateStoreId() {
         return RandomStringUtils.randomAlphanumeric(STORE_ID_LENGTH);
     }
 

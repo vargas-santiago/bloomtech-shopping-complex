@@ -14,6 +14,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 
 
@@ -21,6 +22,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
     private final Logger log = LogManager.getLogger();
     private final AccountDao accountDao;
 
+    @Inject
     public CreateAccount(AccountDao accountDao) {
         this.accountDao = accountDao;
     }
@@ -32,7 +34,11 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
             throw new InvalidCharacterException();
         }
 
+<<<<<<< HEAD
         if (!AccountUtils.isValidString(createAccountRequest.getName())) {
+=======
+        if (!AccountUtils.isValidString(createAccountRequest.getUsername())) {
+>>>>>>> a9d66749d7ed2e2574cfc99cf48c4bdb806bed2f
             throw new InvalidCharacterException();
         }
 
@@ -45,7 +51,8 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
         }
 
         newAccount.setUserId(AccountUtils.generateUserId());
-        newAccount.setName(createAccountRequest.getName());
+        newAccount.setUsername(createAccountRequest.getUsername());
+        newAccount.setPassword(createAccountRequest.getPassword());
         newAccount.setEmail(createAccountRequest.getEmail());
         newAccount.setFavorites(new ArrayList<>());
 

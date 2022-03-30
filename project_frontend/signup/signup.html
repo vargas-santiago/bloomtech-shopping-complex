@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>BloomTech Shopping Complex</title>
-    <link rel="stylesheet" href="/frontend/signup/signupstyles.css">
+    <link rel="stylesheet" href="/project_frontend/signup/signupstyles.css">
     <link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
-    <script src="signupscript.js"></script>
+    <script src="/project_frontend/signup/signupscript.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../../resources/images/logo/Logo.png" alt="BloomTech Shopping Complex Logo" class="logoimg">
+            <img src="/project_frontend/Logo.png" alt="BloomTech Shopping Complex Logo" class="logoimg">
             <h2 id="headertext">Sign Up</h2>
         </div>
     </header>
 
     <section class="goBack">
-        <a href="../login/index.html">
+        <a href="/project_frontend/login/index.html">
             <button class="btn">Go back to login</button>
         </a>
     </section>
@@ -27,11 +27,16 @@
         </div>
         <br>
         <div class="form">
-            <form id="signupSubmit">
-                <input type="text" title="username" placeholder="username" />
-                <input type="text" title="password" placeholder="password" />
-                <input type="text" title="name" placeholder="name" />
-                <input type="text" title="email" placeholder="email" />
+            <form>
+                <label for="username"><b>Username:</b></label>
+                <input type="text" id="username" required placeholder="username"/>
+
+                <label for="password"><b>Password:</b></label>
+                <input type="text" id="password" required placeholder="password"/>
+
+                <label for="email"><b>Email:</b></label>
+                <input type="text" id="email" required placeholder="email" />
+
                 <button type="submit" class="btn" onclick="submit()">Submit</button>
             </form>
         </div>

@@ -4,9 +4,12 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
 import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;
 
+import javax.inject.Inject;
+
 public class AccountDao {
     private final DynamoDBMapper dynamoDbMapper;
 
+    @Inject
     public AccountDao(DynamoDBMapper dynamoDbMapper) {
         this.dynamoDbMapper = dynamoDbMapper;
     }
