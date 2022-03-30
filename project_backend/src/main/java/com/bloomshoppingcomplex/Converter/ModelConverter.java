@@ -34,7 +34,7 @@ public class ModelConverter {
         if (store.getCategories() == null) {
             categories = null;
         } else {
-            categories = Lists.newArrayList(categories);
+            categories = store.getCategories();
         }
 
         return StoreModel.builder()
