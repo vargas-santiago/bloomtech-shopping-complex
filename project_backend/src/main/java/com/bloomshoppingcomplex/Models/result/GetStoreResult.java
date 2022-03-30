@@ -2,10 +2,10 @@ package com.bloomshoppingcomplex.Models.result;
 
 import com.bloomshoppingcomplex.Models.StoreModel;
 
-public class GetStoreInfoResult {
+public class GetStoreResult {
     private StoreModel store;
 
-    public GetStoreInfoResult(Builder builder) { this.store = builder.store; }
+    public GetStoreResult(Builder builder) { this.store = builder.store; }
 
     public StoreModel getStore() { return store; }
 
@@ -21,6 +21,6 @@ public class GetStoreInfoResult {
             return this;
         }
 
-        public GetStoreInfoResult build() { return new GetStoreInfoResult(this); }
+        public GetStoreResult build() { return new GetStoreResult(this); }
     }
 }

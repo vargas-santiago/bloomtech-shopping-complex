@@ -1,15 +1,16 @@
 package com.bloomshoppingcomplex.Models.result;
 
+
 import com.bloomshoppingcomplex.Models.AccountModel;
 
-public class GetAccountResult {
+public class AddFavoriteResult {
     private AccountModel account;
 
-    public GetAccountResult(Builder builder) {
+    public AddFavoriteResult(Builder builder) {
         this.account = builder.account;
     }
 
-    public AccountModel getAccountModel() {
+    public AccountModel getAccount() {
         return account;
     }
 
@@ -24,13 +25,13 @@ public class GetAccountResult {
     public static final class Builder {
         private AccountModel account;
 
-        public Builder withAccountModel(AccountModel accountToUse) {
-            this.account = accountToUse;
+        public Builder withAccount(AccountModel account) {
+            this.account = account;
             return this;
         }
 
-        public GetAccountResult build() {
-            return new GetAccountResult(this);
+        public AddFavoriteResult build() {
+            return new AddFavoriteResult(this);
         }
     }
 }

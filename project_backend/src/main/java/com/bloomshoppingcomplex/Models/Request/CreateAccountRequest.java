@@ -10,7 +10,6 @@ public class CreateAccountRequest {
 
     public CreateAccountRequest(String userId, String name, String email) {
         this.userId = userId;
-        //this.favorites = favorites;
         this.name = name;
         this.email = email;
     }
@@ -18,7 +17,7 @@ public class CreateAccountRequest {
     public CreateAccountRequest() {}
 
     public CreateAccountRequest(Builder builder) {
-        this.userId = builder().userId;
+        this.userId = builder.userId;
         this.name = builder.name;
         this.email = builder.email;
     }
@@ -31,15 +30,6 @@ public class CreateAccountRequest {
     public void setUserId(String userId) {
         this.userId = userId;
     }
-
-
-//    public List<String> getFavorites() {
-//        return favorites;
-//    }
-
-//    public void setFavorites(List<String> favorites) {
-//        this.favorites = favorites;
-//    }
 
     public String getName() {
         return name;

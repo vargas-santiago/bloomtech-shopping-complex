@@ -21,17 +21,17 @@ public class GetAccount implements RequestHandler<GetAccountRequest, GetAccountR
 
     @Override
     public GetAccountResult handleRequest(GetAccountRequest getAccountRequest, Context context) {
+        Account account = accountDao.getAccount(getAccountRequest.getUserId());
 
         if (getAccountRequest.getUserId() == null) {
             throw new UserNotFoundException();
         }
 
-        String requestId = getAccountRequest.getUserId();
-        Account account = accountDao.getAccount(requestId);
+
         AccountModel accountModel = new ModelConverter().toAccountModel(account);
 
         return GetAccountResult.builder()
-                .withAccount(accountModel)
+                .withAccountModel(accountModel)
                 .build();
     }
 }

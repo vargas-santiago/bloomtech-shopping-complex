@@ -7,36 +7,35 @@ import com.bloomshoppingcomplex.DynamoDB.Models.Store;
 import com.bloomshoppingcomplex.DynamoDB.StoreDao;
 import com.bloomshoppingcomplex.Exceptions.StoreNotFoundException;
 import com.bloomshoppingcomplex.Models.StoreModel;
-import com.bloomshoppingcomplex.Models.Request.GetStoreInfoRequest;
-import com.bloomshoppingcomplex.Models.result.GetStoreInfoResult;
+import com.bloomshoppingcomplex.Models.Request.GetStoreRequest;
+import com.bloomshoppingcomplex.Models.result.GetStoreResult;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 
-public class GetStoreInfo implements RequestHandler<GetStoreInfoRequest, GetStoreInfoResult> {
+public class GetStore implements RequestHandler<GetStoreRequest, GetStoreResult> {
     private final Logger log = LogManager.getLogger();
     private final StoreDao storeDao;
 
     @Inject
-    public GetStoreInfo(StoreDao storeDao) {
+    public GetStore(StoreDao storeDao) {
         this.storeDao = storeDao;
     }
 
     @Override
-    public GetStoreInfoResult handleRequest(final GetStoreInfoRequest getStoreInfoRequest, Context context) {
-        log.info("Received GetStoreInfoRequest{}", getStoreInfoRequest);
-        String requestedStoreId = getStoreInfoRequest.getStoreId();
+    public GetStoreResult handleRequest(final GetStoreRequest getStoreRequest, Context context) {
+        log.info("Received GetStoreRequest{}", getStoreRequest);
+        Store store = storeDao.getStore(getStoreRequest.getStoreId());
 
-        if (requestedStoreId == null) {
-            throw new StoreNotFoundException(requestedStoreId + " Store ID not found.");
+        if (store == null) {
+            throw new StoreNotFoundException(getStoreRequest.getStoreId() + " Store ID not found.");
         }
 
-        Store store = storeDao.getStore(requestedStoreId);
         StoreModel storeModel = new ModelConverter().toStoreModel(store);
 
-        return GetStoreInfoResult.builder()
+        return GetStoreResult.builder()
                 .withStore(storeModel)
                 .build();
     }

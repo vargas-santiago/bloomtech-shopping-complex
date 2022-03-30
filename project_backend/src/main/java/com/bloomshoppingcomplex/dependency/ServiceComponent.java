@@ -1,7 +1,7 @@
 package com.bloomshoppingcomplex.dependency;
 
 
-import com.bloomshoppingcomplex.EndPoint.GetStoreInfo;
+import com.bloomshoppingcomplex.EndPoint.GetStore;
 import dagger.Component;
 
 import javax.inject.Singleton;
@@ -9,5 +9,5 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = {DaoModule.class})
 public interface ServiceComponent {
-    GetStoreInfo provideGetStoreInfo();
+    GetStore provideGetStoreInfo();
 }

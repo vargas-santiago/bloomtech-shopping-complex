@@ -1,15 +1,18 @@
 package com.bloomshoppingcomplex.Models.Request;
 
+import java.util.List;
 import java.util.Objects;
 
-public class GetStoreInfoRequest {
+public class GetStoreRequest {
     private String storeId;
 
-    public GetStoreInfoRequest() {
+    public GetStoreRequest() {
 
     }
 
-    public GetStoreInfoRequest(Builder builder) { this.storeId = builder.storeId; }
+    public GetStoreRequest(Builder builder) {
+        this.storeId = builder.storeId;
+    }
 
     public String getStoreId() { return storeId; }
 
@@ -18,8 +21,8 @@ public class GetStoreInfoRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof GetStoreInfoRequest)) return false;
-        GetStoreInfoRequest that = (GetStoreInfoRequest) o;
+        if (!(o instanceof GetStoreRequest)) return false;
+        GetStoreRequest that = (GetStoreRequest) o;
         return Objects.equals(getStoreId(), that.getStoreId());
     }
 
@@ -49,6 +52,6 @@ public class GetStoreInfoRequest {
             return this;
         }
 
-        public GetStoreInfoRequest build() { return new GetStoreInfoRequest(this); }
+        public GetStoreRequest build() { return new GetStoreRequest(this); }
     }
 }
