@@ -5,10 +5,15 @@ import java.util.Objects;
 public class GetAccountRequest {
     private String userId;
 
-    public GetAccountRequest() {}
+    public GetAccountRequest(String userId) {
+        this.userId = userId;
+    }
+
+    public  GetAccountRequest() {
+    }
 
     public GetAccountRequest(Builder builder) {
-
+        this.userId = builder.userId;
     }
 
     public String getUserId() {

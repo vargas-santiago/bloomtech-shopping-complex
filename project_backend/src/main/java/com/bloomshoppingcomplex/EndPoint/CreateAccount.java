@@ -1,6 +1,8 @@
 package com.bloomshoppingcomplex.EndPoint;
 
+import com.bloomshoppingcomplex.Converter.ModelConverter;
 import com.bloomshoppingcomplex.Exceptions.InvalidCharacterException;
+import com.bloomshoppingcomplex.Exceptions.UserNotFoundException;
 import com.bloomshoppingcomplex.Models.AccountModel;
 import com.bloomshoppingcomplex.DynamoDB.AccountDao;
 import com.bloomshoppingcomplex.DynamoDB.Models.Account;
@@ -26,15 +28,21 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
     public CreateAccountResult handleRequest(final CreateAccountRequest createAccountRequest, Context context) {
         log.info("Received CreateAccountRequest {}", createAccountRequest);
 
-        if (AccountUtils.isValidString(createAccountRequest.getUserId())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getUserId())) {
             throw new InvalidCharacterException();
         }
 
-        if (AccountUtils.isValidString(createAccountRequest.getName())) {
+        if (!AccountUtils.isValidString(createAccountRequest.getName())) {
             throw new InvalidCharacterException();
         }
 
         Account newAccount = new Account();
+
+        String userId = AccountUtils.generateUserId();
+
+        while (accountDao.doesAccountExist(userId) == true) {
+            userId = AccountUtils.generateUserId();
+        }
 
         newAccount.setUserId(AccountUtils.generateUserId());
         newAccount.setName(createAccountRequest.getName());
@@ -43,7 +51,7 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
 
         this.accountDao.saveAccount(newAccount);
 
-        AccountModel accountModel = new AccountModelConverter().toAccountModel(newAccount);
+        AccountModel accountModel = new ModelConverter().toAccountModel(newAccount);
 
         return CreateAccountResult.builder()
                 .withAccount(accountModel)

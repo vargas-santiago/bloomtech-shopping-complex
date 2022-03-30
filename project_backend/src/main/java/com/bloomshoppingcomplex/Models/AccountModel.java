@@ -1,5 +1,7 @@
 package com.bloomshoppingcomplex.Models;
 
+import com.bloomshoppingcomplex.DynamoDB.Models.Account;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -16,6 +18,16 @@ public class AccountModel {
         this.favorites = builder.favorites;
         this.name = builder.name;
         this.email = builder.email;
+    }
+
+    public Account toAccount() {
+        Account account = new Account();
+        account.setUserId(this.userId);
+        account.setFavorites(this.favorites);
+        account.setName(this.name);
+        account.setEmail(this.email);
+
+        return account;
     }
 
 

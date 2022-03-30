@@ -15,25 +15,23 @@ import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 
-public class GetStoreInfo implements RequestHandler<GetStoreRequest, GetStoreResult> {
+public class GetStore implements RequestHandler<GetStoreRequest, GetStoreResult> {
     private final Logger log = LogManager.getLogger();
     private final StoreDao storeDao;
 
     @Inject
-    public GetStoreInfo(StoreDao storeDao) {
+    public GetStore(StoreDao storeDao) {
         this.storeDao = storeDao;
     }
 
     @Override
     public GetStoreResult handleRequest(final GetStoreRequest getStoreRequest, Context context) {
-        log.info("Received GetStoreInfoRequest{}", getStoreRequest);
-        String requestedStoreId = getStoreRequest.getStoreId();
+        log.info("Received GetStoreRequest{}", getStoreRequest);
+        Store store = storeDao.getStore(getStoreRequest.getStoreId());
 
-        Store store = storeDao.getStore(requestedStoreId);
         if (store == null) {
-            throw new StoreNotFoundException(requestedStoreId + " Store ID not found.");
+            throw new StoreNotFoundException(getStoreRequest.getStoreId() + " Store ID not found.");
         }
-
 
         StoreModel storeModel = new ModelConverter().toStoreModel(store);
 
