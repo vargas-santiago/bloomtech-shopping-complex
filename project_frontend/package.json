@@ -1,0 +1,13 @@
+{
+  "name": "BloomTechShoppingComplex",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "8.5.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1105.0",
+    "bcrypt": "^5.0.1"
+  }
+}
