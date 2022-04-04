@@ -5,5 +5,5 @@
     <file type="web" url="file://$PROJECT_DIR$/project_backend" />
     <file type="web" url="file://$PROJECT_DIR$/template_java_project" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="corretto-11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="corretto-11" project-jdk-type="JavaSDK" />
 </project>

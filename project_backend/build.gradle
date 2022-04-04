@@ -34,38 +34,38 @@ sourceSets {
 }
 
 dependencies {
-    implementation 'org.junit.jupiter:junit-jupiter:5.7.2'
-    implementation 'junit:junit:4.13.1'
-    implementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    implementation 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    implementation 'junit:junit:4.13.2'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 
 
-    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'com.google.guava:guava:31.1-jre'
 
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.10.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.3.1'
 
-    implementation group: 'com.google.code.gson', name: 'gson', version: '2.7'
-    implementation group: 'com.google.dagger', name: 'dagger', version: '2.15'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
+    implementation group: 'com.google.dagger', name: 'dagger', version: '2.41'
 
-    implementation "com.google.dagger:dagger:2.15"
-    annotationProcessor "com.google.dagger:dagger-compiler:2.15"
+    implementation 'com.google.dagger:dagger:2.41'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.41'
 
     // https://mvnrepository.com/artifact/org.testng/testng
-    implementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation group: 'org.testng', name: 'testng', version: '7.5'
 
 
     // Added for AWS Lambda Functions
     implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.1000')
     implementation 'com.amazonaws:aws-java-sdk-s3'
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
-    implementation 'com.amazonaws:aws-lambda-java-events:2.2.9'
-    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.181'
-    implementation 'org.junit.platform:junit-platform-launcher:1.7.2'
-    runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.2.0'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.11.0'
+    implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.12.187'
+    implementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+    runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.5.1'
 
     // Added for using log4j usage
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.14.1'
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
 
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
@@ -73,6 +73,9 @@ dependencies {
 
     //rootDir is project_backend
     implementation files("$rootDir/src/main/resources/ATAResources.jar")
+
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.21'
+    implementation 'com.hanzoy:utils:3.1'
 
 
 }

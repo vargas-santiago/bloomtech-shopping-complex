@@ -25,7 +25,7 @@ public class GetAccount implements RequestHandler<GetAccountRequest, GetAccountR
     public GetAccountResult handleRequest(GetAccountRequest getAccountRequest, Context context) {
         Account account = accountDao.getAccount(getAccountRequest.getUserId());
 
-        if (getAccountRequest.getUserId() == null) {
+        if (account == null) {
             throw new UserNotFoundException();
         }
 

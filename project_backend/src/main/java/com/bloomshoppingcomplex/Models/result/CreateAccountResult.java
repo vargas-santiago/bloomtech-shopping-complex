@@ -13,7 +13,7 @@ public class CreateAccountResult {
         return accountModel;
     }
 
-    public void setAccountModel(AccountModel account) {
+    public void setAccountModel(AccountModel accountModel) {
         this.accountModel = accountModel;
     }
 

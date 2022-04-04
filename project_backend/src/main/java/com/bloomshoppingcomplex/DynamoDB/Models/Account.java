@@ -28,7 +28,7 @@ public class Account {
 
     public void setPassword(String password) { this.password = password; }
 
-    @DynamoDBAttribute(attributeName = "name")
+    @DynamoDBAttribute(attributeName = "username")
     public String getUsername() {
         return username;
     }

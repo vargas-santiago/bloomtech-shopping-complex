@@ -41,11 +41,11 @@ public class CreateAccount implements RequestHandler<CreateAccountRequest, Creat
 
         String userId = AccountUtils.generateUserId();
 
-        while (accountDao.doesAccountExist(userId) == true) {
-            userId = AccountUtils.generateUserId();
-        }
+//        while (accountDao.doesAccountExist(userId) == true) {
+//            userId = AccountUtils.generateUserId();
+//        }
 
-        newAccount.setUserId(AccountUtils.generateUserId());
+        newAccount.setUserId(userId);
         newAccount.setUsername(createAccountRequest.getUsername());
         newAccount.setPassword(createAccountRequest.getPassword());
         newAccount.setEmail(createAccountRequest.getEmail());
