@@ -28,8 +28,68 @@ import verizon from './storelogo/verizon150x150.png';
 import yankee from './storelogo/yankeecandle150x150.png';
 import zales from './storelogo/zales150x150.png';
 import './index.css';
+import axios from "axios";
+import {getUserId, setUserSession} from "./service/AuthService";
 
-const Stores = () => {
+const Stores = async () => {
+    let abercrombieId = "z2fBI";
+    let aeId = "00002";
+    let barnesId = "00003";
+    let bathBodyId = "00004";
+    let footId = "00005";
+    let gamestopId = "00006";
+    let gncId = "00007";
+    let hollisterId = "00008";
+    let journeyId = "00009";
+    let kayId = "00010";
+    let lanailsId = "00011";
+    let legacyId = "00012";
+    let legoId = "00013";
+    let lidsId = "00014";
+    let loveId = "00015";
+    let nikeId = "00016";
+    let northfaceId = "00017";
+    let oldnavyId = "00018";
+    let pandoraId = "00019";
+    let pierceId = "00020";
+    let pinkId = "00021";
+    let sephoraId = "00022";
+    let sleepId = "00023";
+    let spencersId = "00024";
+    let tmobileId = "00025";
+    let verizonId = "00026";
+    let zalesId = "00027";
+
+    const favoritePutUrl = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts/favorites';
+
+    const submitHandler = async (event) => {
+        event.preventDefault();
+
+        let storeId = "00000";
+
+        console.log(event.srcElement.id);
+        const data = {
+            userId: getUserId(),
+            storeId: storeId
+        }
+
+        try {
+            let res = await axios({
+                method: 'PUT',
+                data: data,
+                url: favoritePutUrl
+            });
+
+            if (res.status === 200) {
+                setUserSession(res.data.accountModel.username, res.data.accountModel.userId, res.data.accountModel.email, res.data.accountModel.favorites);
+                console.log(res);
+            }
+        }
+        catch (error) {
+
+        }
+    }
+
     return (
         <div>
             <section className="stores">
@@ -39,67 +99,67 @@ const Stores = () => {
                         <h4 className="storeName">Abercrombie & Fitch</h4>
                         <img className="storeImg"
                              src={abercrombie}
-                             alt="abercrombie logo" />
-                            <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
-                            <a href="https://www.abercrombie.com/shop/us" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="abercrombie logo"/>
+                        <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
+                        <a href="https://www.abercrombie.com/shop/us" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h4 className="storeName">American Eagle Outfitters</h4>
                         <img className="storeImg"
                              src={ae}
-                             alt="american eagle logo" />
-                            <p className="storeTag">women's apparel / men's apparel</p>
-                            <a href="https://www.ae.com/us/en" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="american eagle logo"/>
+                        <p className="storeTag">women's apparel / men's apparel</p>
+                        <a href="https://www.ae.com/us/en" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h3 className="storeName">Barnes & Noble</h3>
                         <img className="storeImg"
                              src={barnes}
-                             alt="barnes and noble logo" />
-                            <p className="storeTag">bookstore</p>
-                            <a href="https://www.barnesandnoble.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="barnes and noble logo"/>
+                        <p className="storeTag">bookstore</p>
+                        <a href="https://www.barnesandnoble.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h4 className="storeName">Bath & Body Works</h4>
                         <img className="storeImg"
                              src={bathbody}
-                             alt="bath and body works logo" />
-                            <p className="storeTag">health and beauty</p>
-                            <a href="https://www.bathandbodyworks.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="bath and body works logo"/>
+                        <p className="storeTag">health and beauty</p>
+                        <a href="https://www.bathandbodyworks.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h4 className="storeName">Foot Locker</h4>
                         <img className="storeImg"
                              src={footlocker}
-                             alt="foot locker logo" />
-                            <p className="storeTag">shoes</p>
-                            <a href="https://www.footlocker.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="foot locker logo"/>
+                        <p className="storeTag">shoes</p>
+                        <a href="https://www.footlocker.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h4 className="storeName">Gamestop</h4>
                         <img className="storeImg"
                              src={gamestop}
-                             alt="gamestop logo" />
+                             alt="gamestop logo"/>
                         <p className="storeTag">electronics and tech</p>
                         <a href="https://www.gamestop.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
@@ -111,24 +171,24 @@ const Stores = () => {
                         <h4 className="storeName">General Nutrition Center</h4>
                         <img className="storeImg"
                              src={gnc}
-                             alt="gnc logo" />
-                            <p className="storeTag">health and beauty</p>
-                            <a href="https://www.gnc.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="gnc logo"/>
+                        <p className="storeTag">health and beauty</p>
+                        <a href="https://www.gnc.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
                         <h4 className="storeName">Hollister</h4>
                         <img className="storeImg"
                              src={hollister}
-                             alt="hollister logo" />
-                            <p className="storeTag">women's apparel / men's apparel</p>
-                            <a href="https://www.hollisterco.com/shop/us" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                             alt="hollister logo"/>
+                        <p className="storeTag">women's apparel / men's apparel</p>
+                        <a href="https://www.hollisterco.com/shop/us" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -136,11 +196,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={journeys}
                              alt="journeys logo"/>
-                            <p className="storeTag">shoes</p>
-                            <a href="https://www.journeys.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">shoes</p>
+                        <a href="https://www.journeys.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -148,11 +208,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={kay}
                              alt="kay's logo"/>
-                            <p className="storeTag">jewelry</p>
-                            <a href="https://www.kay.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">jewelry</p>
+                        <a href="https://www.kay.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -160,11 +220,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={lanails}
                              alt="la nails logo"/>
-                            <p className="storeTag">health and beauty</p>
-                            <a href="https://www.lanailsbeauty.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">health and beauty</p>
+                        <a href="https://www.lanailsbeauty.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -172,11 +232,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={legacy}
                              alt="legacy logo"/>
-                            <p className="storeTag">toys, games, and hobbies</p>
-                            <a href="https://www.legacytoys.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">toys, games, and hobbies</p>
+                        <a href="https://www.legacytoys.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -184,11 +244,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={lego}
                              alt="lego logo"/>
-                            <p className="storeTag">toys, games, and hobbies</p>
-                            <a href="https://www.lego.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">toys, games, and hobbies</p>
+                        <a href="https://www.lego.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -196,11 +256,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={lids}
                              alt="lids logo"/>
-                            <p className="storeTag">hats and accessories</p>
-                            <a href="https://www.lids.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">hats and accessories</p>
+                        <a href="https://www.lids.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -208,11 +268,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={love}
                              alt="lovesac logo"/>
-                            <p className="storeTag">furniture</p>
-                            <a href="https://www.lovesac.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">furniture</p>
+                        <a href="https://www.lovesac.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -220,11 +280,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={nike}
                              alt="nike logo"/>
-                            <p className="storeTag">shoes</p>
-                            <a href="https://www.nike.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">shoes</p>
+                        <a href="https://www.nike.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -232,11 +292,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={northface}
                              alt="north face logo"/>
-                            <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
-                            <a href="https://www.thenorthface.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
+                        <a href="https://www.thenorthface.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -244,11 +304,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={oldnavy}
                              alt="old navy logo"/>
-                            <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
-                            <a href="https://www.oldnavy.gap.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">women's apparel / men's apparel / children's apparel</p>
+                        <a href="https://www.oldnavy.gap.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -256,11 +316,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={pandora}
                              alt="pandora logo"/>
-                            <p className="storeTag">jewelry</p>
-                            <a href="https://www.pandora.net/en-ng" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">jewelry</p>
+                        <a href="https://www.pandora.net/en-ng" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -268,11 +328,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={pierce}
                              alt="piercing pagoda logo"/>
-                            <p className="storeTag">jewelry</p>
-                            <a href="https://www.banter.com/" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">jewelry</p>
+                        <a href="https://www.banter.com/" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -280,11 +340,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={pink}
                              alt="pink logo"/>
-                            <p className="storeTag">women's apparel</p>
-                            <a href="https://www.victoriassecret.com/us/pink" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">women's apparel</p>
+                        <a href="https://www.victoriassecret.com/us/pink" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -292,11 +352,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={sephora}
                              alt="sephora logo"/>
-                            <p className="storeTag">health and beauty</p>
-                            <a href="https://www.sephora.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">health and beauty</p>
+                        <a href="https://www.sephora.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -304,11 +364,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={sleep}
                              alt="sleep number logo"/>
-                            <p className="storeTag">furniture</p>
-                            <a href="https://www.sleepnumber.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">furniture</p>
+                        <a href="https://www.sleepnumber.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -316,11 +376,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={spencers}
                              alt="spencers logo"/>
-                            <p className="storeTag">home</p>
-                            <a href="https://www.spencers.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">home</p>
+                        <a href="https://www.spencers.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -328,11 +388,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={tmobile}
                              alt="t-mobile logo"/>
-                            <p className="storeTag">electronics and tech</p>
-                            <a href="https://www.t-mobile.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">electronics and tech</p>
+                        <a href="https://www.t-mobile.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -340,11 +400,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={verizon}
                              alt="verizon logo"/>
-                            <p className="storeTag">electronics and tech</p>
-                            <a href="https://www.verizon.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">electronics and tech</p>
+                        <a href="https://www.verizon.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -352,11 +412,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={yankee}
                              alt="yankee candle logo"/>
-                            <p className="storeTag">home</p>
-                            <a href="https://www.yankeecandle.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">home</p>
+                        <a href="https://www.yankeecandle.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -364,11 +424,11 @@ const Stores = () => {
                         <img className="storeImg"
                              src={zales}
                              alt="zales logo"/>
-                            <p className="storeTag">jewelry</p>
-                            <a href="https://www.zales.com" target="_blank" rel="noreferrer">
-                                <button className="btn">Visit this Store</button>
-                            </a>
-                            <button className="favoritesButton">Add To Favorites</button>
+                        <p className="storeTag">jewelry</p>
+                        <a href="https://www.zales.com" target="_blank" rel="noreferrer">
+                            <button className="btn">Visit this Store</button>
+                        </a>
+                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                 </div>

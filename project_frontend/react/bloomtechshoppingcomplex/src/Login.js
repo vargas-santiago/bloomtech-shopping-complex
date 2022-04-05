@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { setUserSession } from './service/AuthService';
+import {getFavorites, setUserSession} from './service/AuthService';
 import axios from 'axios';
 
 const loginApiURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts/login';
@@ -9,27 +9,34 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
 
-    const submitHandler = (event) => {
+    const submitHandler = async (event) => {
         event.preventDefault();
         if (username.trim() === '' || password.trim() === '') {
             setErrorMessage('Both fields are required');
             return;
         }
         setErrorMessage(null);
-        const requestBody = {
+
+        const data = {
             username: username,
             password: password
         }
 
-        axios.post(loginApiURL, requestBody).then((response) => {
-            setUserSession(response.data.user, response.data.token);
-        }).catch((error) => {
-            if (error.response.status === 401 || error.response.status === 403) {
-                setErrorMessage(error.response.data.message);
-            } else {
-                setErrorMessage('server error');
+        try {
+            let res = await axios({
+                method: 'POST',
+                data: data,
+                url: loginApiURL,
+
+            });
+            if (res.status === 200) {
+                setUserSession(res.data.accountModel.username, res.data.accountModel.userId, res.data.accountModel.email, res.data.accountModel.favorites);
+                console.log(res);
             }
-        })
+        }
+        catch (error) {
+
+        }
     }
 
     return (

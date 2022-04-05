@@ -1,24 +1,55 @@
 module.exports = {
-    getUser: function() {
-        const user = sessionStorage.getItem('user');
-        if (user === 'undefined' || !user) {
+    getUsername: function() {
+        const username = sessionStorage.getItem('username');
+
+        if (username === 'undefined' || !username) {
             return null;
         } else {
-            return JSON.parse(user);
+            return JSON.parse(username);
         }
     },
 
-    getToken: function() {
-        return sessionStorage.getItem('token');
+    getUserId: function() {
+        const userId = sessionStorage.getItem('userId');
+
+        if (userId === 'undefined' || !userId) {
+            return null;
+        } else {
+            return JSON.parse(userId);
+        }
     },
 
-    setUserSession: function(user, token) {
-        sessionStorage.setItem('user', JSON.stringify(user));
-        sessionStorage.setItem('token', token);
+    getEmail: function() {
+        const email = sessionStorage.getItem('email');
+
+        if (email === 'undefined' || !email) {
+            return null;
+        } else {
+            return JSON.parse(email);
+        }
+    },
+
+    getFavorites: function() {
+        const favorites = sessionStorage.getItem('favorites');
+
+        if (favorites === 'undefined' || !favorites) {
+            return null;
+        } else {
+            return JSON.parse(favorites);
+        }
+    },
+
+    setUserSession: function(username, userId, email, favorites) {
+        sessionStorage.setItem('username', JSON.stringify(username));
+        sessionStorage.setItem('userId', JSON.stringify(userId));
+        sessionStorage.setItem('email', JSON.stringify(email));
+        sessionStorage.setItem('favorites', JSON.stringify(favorites));
     },
 
     resetUserSession: function() {
-        sessionStorage.removeItem('user');
-        sessionStorage.removeItem('token');
+        sessionStorage.removeItem('userId');
+        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('email');
+        sessionStorage.removeItem('favorites');
     }
 }
