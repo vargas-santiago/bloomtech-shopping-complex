@@ -27,6 +27,7 @@ import tmobile from './storelogo/tmobile150x150.png';
 import verizon from './storelogo/verizon150x150.png';
 import yankee from './storelogo/yankeecandle150x150.png';
 import zales from './storelogo/zales150x150.png';
+import './index.css';
 
 const Stores = () => {
     return (

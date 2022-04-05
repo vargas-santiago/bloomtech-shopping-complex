@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Logo from './Logo.png';
 
 const registerURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts';
 

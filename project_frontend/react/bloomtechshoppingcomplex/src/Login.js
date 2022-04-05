@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import { setUserSession } from './service/AuthService';
 import axios from 'axios';
 
-export let response;
-
 const loginApiURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts/login';
 
 const Login = () => {
