@@ -1,8 +1,9 @@
-com/bloomshoppingcomplex/EndPoint/DeleteFavorite.java
- com.bloomshoppingcomplex.EndPoint.DeleteFavorite
-com/bloomshoppingcomplex/Models/result/GetAccountResult.java
- com.bloomshoppingcomplex.Models.result.GetAccountResult
- com.bloomshoppingcomplex.Models.result.GetAccountResult$Builder
+com/bloomshoppingcomplex/Models/StoreModel.java
+ com.bloomshoppingcomplex.Models.StoreModel
+ com.bloomshoppingcomplex.Models.StoreModel$Builder
+com/bloomshoppingcomplex/Models/result/GetStoreResult.java
+ com.bloomshoppingcomplex.Models.result.GetStoreResult
+ com.bloomshoppingcomplex.Models.result.GetStoreResult$Builder
 com/bloomshoppingcomplex/Exceptions/UserNotFoundException.java
  com.bloomshoppingcomplex.Exceptions.UserNotFoundException
 com/bloomshoppingcomplex/Util/StoreUtils.java
@@ -12,52 +13,57 @@ com/bloomshoppingcomplex/DynamoDB/ItemDao.java
 com/bloomshoppingcomplex/Models/Request/DeleteFavoriteRequest.java
  com.bloomshoppingcomplex.Models.Request.DeleteFavoriteRequest
  com.bloomshoppingcomplex.Models.Request.DeleteFavoriteRequest$Builder
-com/bloomshoppingcomplex/EndPoint/GetAccount.java
- com.bloomshoppingcomplex.EndPoint.GetAccount
+com/bloomshoppingcomplex/Exceptions/StoreNotFoundException.java
+ com.bloomshoppingcomplex.Exceptions.StoreNotFoundException
 com/bloomshoppingcomplex/Models/Request/AddFavoriteRequest.java
  com.bloomshoppingcomplex.Models.Request.AddFavoriteRequest
  com.bloomshoppingcomplex.Models.Request.AddFavoriteRequest$Builder
 com/bloomshoppingcomplex/Models/Request/GetAccountRequest.java
  com.bloomshoppingcomplex.Models.Request.GetAccountRequest
  com.bloomshoppingcomplex.Models.Request.GetAccountRequest$Builder
-com/bloomshoppingcomplex/EndPoint/AddFavorite.java
- com.bloomshoppingcomplex.EndPoint.AddFavorite
+com/bloomshoppingcomplex/auth/UserLoginResponsePayload.java
+ com.bloomshoppingcomplex.auth.UserLoginResponsePayload
 com/bloomshoppingcomplex/Models/Request/UpdateStoreRequest.java
  com.bloomshoppingcomplex.Models.Request.UpdateStoreRequest
  com.bloomshoppingcomplex.Models.Request.UpdateStoreRequest$Builder
 com/bloomshoppingcomplex/Models/Request/UpdateAccountRequest.java
  com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest
  com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest$Builder
-com/bloomshoppingcomplex/Models/result/UpdateAccountResult.java
- com.bloomshoppingcomplex.Models.result.UpdateAccountResult
- com.bloomshoppingcomplex.Models.result.UpdateAccountResult$Builder
-com/bloomshoppingcomplex/lambda/GetStoreProvider.java
- com.bloomshoppingcomplex.lambda.GetStoreProvider
+com/bloomshoppingcomplex/Models/result/UpdateStoreResult.java
+ com.bloomshoppingcomplex.Models.result.UpdateStoreResult
+ com.bloomshoppingcomplex.Models.result.UpdateStoreResult$Builder
+com/bloomshoppingcomplex/Models/Request/CreateAccountRequest.java
+ com.bloomshoppingcomplex.Models.Request.CreateAccountRequest
+ com.bloomshoppingcomplex.Models.Request.CreateAccountRequest$Builder
 com/bloomshoppingcomplex/Exceptions/InvalidAttributeChangeException.java
  com.bloomshoppingcomplex.Exceptions.InvalidAttributeChangeException
+com/bloomshoppingcomplex/auth/UserController.java
+ com.bloomshoppingcomplex.auth.UserController
 com/bloomshoppingcomplex/EndPoint/GetStore.java
  com.bloomshoppingcomplex.EndPoint.GetStore
 com/bloomshoppingcomplex/Util/AccountUtils.java
  com.bloomshoppingcomplex.Util.AccountUtils
-com/bloomshoppingcomplex/lambda/DeleteFavoriteProvider.java
- com.bloomshoppingcomplex.lambda.DeleteFavoriteProvider
+com/bloomshoppingcomplex/DynamoDB/Models/Item.java
+ com.bloomshoppingcomplex.DynamoDB.Models.Item
 com/bloomshoppingcomplex/auth/JWTUtil.java
  com.bloomshoppingcomplex.auth.JWTUtil
 com/bloomshoppingcomplex/Exceptions/InvalidCharacterException.java
  com.bloomshoppingcomplex.Exceptions.InvalidCharacterException
-com/bloomshoppingcomplex/lambda/UpdateStoreProvider.java
- com.bloomshoppingcomplex.lambda.UpdateStoreProvider
-com/bloomshoppingcomplex/Converter/ModelConverter.java
- com.bloomshoppingcomplex.Converter.ModelConverter
-com/bloomshoppingcomplex/Models/result/DeleteFavoriteResult.java
- com.bloomshoppingcomplex.Models.result.DeleteFavoriteResult
- com.bloomshoppingcomplex.Models.result.DeleteFavoriteResult$Builder
+com/bloomshoppingcomplex/auth/UsersService.java
+ com.bloomshoppingcomplex.auth.UsersService
+com/bloomshoppingcomplex/DynamoDB/Models/Store.java
+ com.bloomshoppingcomplex.DynamoDB.Models.Store
+com/bloomshoppingcomplex/auth/PolicyDocument.java
+ com.bloomshoppingcomplex.auth.PolicyDocument
+ com.bloomshoppingcomplex.auth.PolicyDocument$Builder
+com/bloomshoppingcomplex/auth/UserLoginRequestPayload.java
+ com.bloomshoppingcomplex.auth.UserLoginRequestPayload
 com/bloomshoppingcomplex/dependency/DaoModule.java
  com.bloomshoppingcomplex.dependency.DaoModule
 com/bloomshoppingcomplex/EndPoint/UpdateStore.java
  com.bloomshoppingcomplex.EndPoint.UpdateStore
-com/bloomshoppingcomplex/DynamoDB/Models/Account.java
- com.bloomshoppingcomplex.DynamoDB.Models.Account
+com/bloomshoppingcomplex/Exceptions/ItemNotFoundException.java
+ com.bloomshoppingcomplex.Exceptions.ItemNotFoundException
 com/bloomshoppingcomplex/auth/Response.java
  com.bloomshoppingcomplex.auth.Response
  com.bloomshoppingcomplex.auth.Response$Builder
@@ -66,56 +72,68 @@ com/bloomshoppingcomplex/DynamoDB/StoreDao.java
 com/bloomshoppingcomplex/Models/Request/GetStoreRequest.java
  com.bloomshoppingcomplex.Models.Request.GetStoreRequest
  com.bloomshoppingcomplex.Models.Request.GetStoreRequest$Builder
-com/bloomshoppingcomplex/lambda/AddFavoriteProvider.java
- com.bloomshoppingcomplex.lambda.AddFavoriteProvider
+com/bloomshoppingcomplex/auth/Statement.java
+ com.bloomshoppingcomplex.auth.Statement
+ com.bloomshoppingcomplex.auth.Statement$Builder
 com/bloomshoppingcomplex/auth/LambdaAuthorizer.java
  com.bloomshoppingcomplex.auth.LambdaAuthorizer
-com/bloomshoppingcomplex/Models/AccountModel.java
- com.bloomshoppingcomplex.Models.AccountModel
- com.bloomshoppingcomplex.Models.AccountModel$Builder
+com/bloomshoppingcomplex/EndPoint/DeleteFavorite.java
+ com.bloomshoppingcomplex.EndPoint.DeleteFavorite
 com/bloomshoppingcomplex/lambda/GetAccountProvider.java
  com.bloomshoppingcomplex.lambda.GetAccountProvider
-com/bloomshoppingcomplex/Models/StoreModel.java
- com.bloomshoppingcomplex.Models.StoreModel
- com.bloomshoppingcomplex.Models.StoreModel$Builder
-com/bloomshoppingcomplex/Exceptions/ItemNotFoundException.java
- com.bloomshoppingcomplex.Exceptions.ItemNotFoundException
-com/bloomshoppingcomplex/auth/PolicyDocument.java
- com.bloomshoppingcomplex.auth.PolicyDocument
- com.bloomshoppingcomplex.auth.PolicyDocument$Builder
+com/bloomshoppingcomplex/EndPoint/CreateAccount.java
+ com.bloomshoppingcomplex.EndPoint.CreateAccount
+com/bloomshoppingcomplex/Models/result/GetAccountResult.java
+ com.bloomshoppingcomplex.Models.result.GetAccountResult
+ com.bloomshoppingcomplex.Models.result.GetAccountResult$Builder
 com/bloomshoppingcomplex/Models/result/CreateAccountResult.java
  com.bloomshoppingcomplex.Models.result.CreateAccountResult
  com.bloomshoppingcomplex.Models.result.CreateAccountResult$Builder
+com/bloomshoppingcomplex/lambda/AddFavoriteProvider.java
+ com.bloomshoppingcomplex.lambda.AddFavoriteProvider
 com/bloomshoppingcomplex/lambda/UpdateAccountProvider.java
  com.bloomshoppingcomplex.lambda.UpdateAccountProvider
-com/bloomshoppingcomplex/DynamoDB/Models/Item.java
- com.bloomshoppingcomplex.DynamoDB.Models.Item
+com/bloomshoppingcomplex/EndPoint/GetAccount.java
+ com.bloomshoppingcomplex.EndPoint.GetAccount
+com/bloomshoppingcomplex/EndPoint/AddFavorite.java
+ com.bloomshoppingcomplex.EndPoint.AddFavorite
 com/bloomshoppingcomplex/Models/result/AddFavoriteResult.java
  com.bloomshoppingcomplex.Models.result.AddFavoriteResult
  com.bloomshoppingcomplex.Models.result.AddFavoriteResult$Builder
 com/bloomshoppingcomplex/EndPoint/UpdateAccount.java
  com.bloomshoppingcomplex.EndPoint.UpdateAccount
-com/bloomshoppingcomplex/Models/result/UpdateStoreResult.java
- com.bloomshoppingcomplex.Models.result.UpdateStoreResult
- com.bloomshoppingcomplex.Models.result.UpdateStoreResult$Builder
-com/bloomshoppingcomplex/auth/Statement.java
- com.bloomshoppingcomplex.auth.Statement
- com.bloomshoppingcomplex.auth.Statement$Builder
-com/bloomshoppingcomplex/Models/Request/CreateAccountRequest.java
- com.bloomshoppingcomplex.Models.Request.CreateAccountRequest
- com.bloomshoppingcomplex.Models.Request.CreateAccountRequest$Builder
-com/bloomshoppingcomplex/Exceptions/StoreNotFoundException.java
- com.bloomshoppingcomplex.Exceptions.StoreNotFoundException
-com/bloomshoppingcomplex/DynamoDB/Models/Store.java
- com.bloomshoppingcomplex.DynamoDB.Models.Store
-com/bloomshoppingcomplex/DynamoDB/AccountDao.java
- com.bloomshoppingcomplex.DynamoDB.AccountDao
-com/bloomshoppingcomplex/Models/result/GetStoreResult.java
- com.bloomshoppingcomplex.Models.result.GetStoreResult
- com.bloomshoppingcomplex.Models.result.GetStoreResult$Builder
-com/bloomshoppingcomplex/EndPoint/CreateAccount.java
- com.bloomshoppingcomplex.EndPoint.CreateAccount
-com/bloomshoppingcomplex/dependency/ServiceComponent.java
- com.bloomshoppingcomplex.dependency.ServiceComponent
+com/bloomshoppingcomplex/Models/result/UpdateAccountResult.java
+ com.bloomshoppingcomplex.Models.result.UpdateAccountResult
+ com.bloomshoppingcomplex.Models.result.UpdateAccountResult$Builder
+com/bloomshoppingcomplex/lambda/GetStoreProvider.java
+ com.bloomshoppingcomplex.lambda.GetStoreProvider
+com/bloomshoppingcomplex/Models/result/LoginAccountResult.java
+ com.bloomshoppingcomplex.Models.result.LoginAccountResult
+ com.bloomshoppingcomplex.Models.result.LoginAccountResult$Builder
 com/bloomshoppingcomplex/lambda/CreateAccountProvider.java
  com.bloomshoppingcomplex.lambda.CreateAccountProvider
+com/bloomshoppingcomplex/lambda/DeleteFavoriteProvider.java
+ com.bloomshoppingcomplex.lambda.DeleteFavoriteProvider
+com/bloomshoppingcomplex/lambda/UpdateStoreProvider.java
+ com.bloomshoppingcomplex.lambda.UpdateStoreProvider
+com/bloomshoppingcomplex/Models/Request/LoginAccountRequest.java
+ com.bloomshoppingcomplex.Models.Request.LoginAccountRequest
+ com.bloomshoppingcomplex.Models.Request.LoginAccountRequest$Builder
+com/bloomshoppingcomplex/Models/AccountModel.java
+ com.bloomshoppingcomplex.Models.AccountModel
+ com.bloomshoppingcomplex.Models.AccountModel$Builder
+com/bloomshoppingcomplex/DynamoDB/AccountDao.java
+ com.bloomshoppingcomplex.DynamoDB.AccountDao
+com/bloomshoppingcomplex/Models/result/DeleteFavoriteResult.java
+ com.bloomshoppingcomplex.Models.result.DeleteFavoriteResult
+ com.bloomshoppingcomplex.Models.result.DeleteFavoriteResult$Builder
+com/bloomshoppingcomplex/DynamoDB/Models/Account.java
+ com.bloomshoppingcomplex.DynamoDB.Models.Account
+com/bloomshoppingcomplex/Converter/ModelConverter.java
+ com.bloomshoppingcomplex.Converter.ModelConverter
+com/bloomshoppingcomplex/dependency/ServiceComponent.java
+ com.bloomshoppingcomplex.dependency.ServiceComponent
+com/bloomshoppingcomplex/lambda/LoginAccountProvider.java
+ com.bloomshoppingcomplex.lambda.LoginAccountProvider
+com/bloomshoppingcomplex/EndPoint/LoginAccount.java
+ com.bloomshoppingcomplex.EndPoint.LoginAccount

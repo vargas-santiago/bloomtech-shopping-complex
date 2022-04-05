@@ -4,19 +4,20 @@ import Login from "./Login";
 import AccountDetails from "./AccountDetails";
 import Stores from "./Stores";
 import EditAccount from "./EditAccount";
-
+import Favorites from "./Favorites";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <div className="header">
-        <NavLink activeclassname="active" to="/SignUp">Sign Up</NavLink>
-        <NavLink activeclassname="active" to="/Login">Login</NavLink>
-        <NavLink activeclassname="active" to="/AccountDetails">Account</NavLink>
-        <NavLink activeclassname="active" to="/EditAccount">Edit Account</NavLink>
-        <NavLink activeclassname="active" to="/Stores">Stores</NavLink>
-      </div>
+        <div className="header">
+            <NavLink activeclassname="active" to="/SignUp">Sign Up</NavLink>
+            <NavLink activeclassname="active" to="/Login">Login</NavLink>
+            <NavLink activeclassname="active" to="/AccountDetails">Account</NavLink>
+            <NavLink activeclassname="active" to="/EditAccount">Edit Account</NavLink>
+            <NavLink activeclassname="active" to="/Stores">Stores</NavLink>
+            <NavLink activeclassname="active" to="/Favorites">Favorites</NavLink>
+        </div>
         <div className="content">
             <Routes>
                 <Route exact path='/' element={<SignUp/>} />
@@ -25,6 +26,7 @@ function App() {
                 <Route exact path='/AccountDetails' element={<AccountDetails/>} />
                 <Route exact path='/EditAccount' element={<EditAccount/>} />
                 <Route exact path='/Stores' element={<Stores/>} />
+                <Route exact path='/Favorites' element={<Favorites/>} />
             </Routes>
         </div>
       </BrowserRouter>

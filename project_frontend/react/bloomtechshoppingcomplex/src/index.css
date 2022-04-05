@@ -1,15 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'DM Serif Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'DM Serif Display', serif;
 }
 
 .header {
@@ -20,8 +17,14 @@ code {
 
 .header a {
   margin: 0 1em 0 1em;
-  font-size: 1.2em;
+  font-size: 2em;
   text-decoration: none;
+  color: #191919;
+}
+
+.header a:hover{
+  color: #00c3b2;
+  background-color: #191919;
 }
 
 .content {

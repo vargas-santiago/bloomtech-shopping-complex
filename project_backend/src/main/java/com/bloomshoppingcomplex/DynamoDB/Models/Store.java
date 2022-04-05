@@ -27,8 +27,7 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "name")
-    //@DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
-    //@DynamoDBIndexRangeKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
+    @DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_NAME_INDEX, attributeName = "name")
     public String getName() {
         return name;
     }
@@ -47,7 +46,6 @@ public class Store {
 
 
     @DynamoDBAttribute(attributeName = "categories")
-    //@DynamoDBIndexHashKey(globalSecondaryIndexName = STORE_CATEGORY_INDEX, attributeName = "categories")
     public List<String> getCategories() {
         return categories;
     }

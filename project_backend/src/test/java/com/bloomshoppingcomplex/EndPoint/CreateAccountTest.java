@@ -64,7 +64,6 @@ public class CreateAccountTest {
         //Makes the requests
         for (Account account : accounts) {
             CreateAccountRequest request = new CreateAccountRequest().builder()
-                    .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
                     .withUsername(account.getUsername())
                     .withPassword(account.getPassword())
@@ -94,7 +93,6 @@ public class CreateAccountTest {
         //Makes the requests
         for (Account account : accounts) {
             CreateAccountRequest request = new CreateAccountRequest().builder()
-                    .withUserId("'")
                     .withEmail(account.getEmail())
                     .withUsername(account.getUsername())
                     .build();
@@ -116,7 +114,6 @@ public class CreateAccountTest {
         //Makes the requests
         for (Account account : accounts) {
             CreateAccountRequest request = new CreateAccountRequest().builder()
-                    .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
                     .withUsername("'")
                     .build();

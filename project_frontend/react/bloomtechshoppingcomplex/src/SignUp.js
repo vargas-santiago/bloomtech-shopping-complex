@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const registerURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing/accounts';
+const registerURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts';
 
 const SignUp = () => {
     const [username, setUsername] = useState('');
@@ -51,7 +51,7 @@ const SignUp = () => {
 
                 <input type="submit" value="SignUp" />
             </form>
-            {message && <p className="message">(message)</p>}
+            {message && <p className="message">You are now registered. Please login.</p>}
         </div>
     )
 }

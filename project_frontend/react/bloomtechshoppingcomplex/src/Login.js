@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import { setUserSession } from './service/AuthService';
 import axios from 'axios';
 
-const loginApiURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing/login';
+export let response;
+
+const loginApiURL = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts/login';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -40,7 +42,7 @@ const Login = () => {
                 password: <input type="password" value={password} onChange={event => setPassword(event.target.value)} />
                 <input type="submit" value="Login" />
             </form>
-            {errorMessage && <p className="message">(errorMessage)</p>}
+            {errorMessage && <p className="message">You are now logged in.</p>}
         </div>
     )
 

@@ -13,6 +13,8 @@ public class Account {
     private String username;
     private String email;
 
+    public static final String USERNAME_INDEX = "UsernameIndex";
+
 
     @DynamoDBHashKey(attributeName = "userId")
     public String getUserId() {
@@ -29,6 +31,7 @@ public class Account {
     public void setPassword(String password) { this.password = password; }
 
     @DynamoDBAttribute(attributeName = "username")
+    @DynamoDBIndexHashKey(globalSecondaryIndexName = USERNAME_INDEX, attributeName="username")
     public String getUsername() {
         return username;
     }

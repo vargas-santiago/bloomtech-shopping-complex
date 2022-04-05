@@ -33,10 +33,5 @@
         <module name="Bloom-Shopping-Complex.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="UnitProject" target="16" />
-      <module name="UnitProject.main" target="16" />
-      <module name="UnitProject.test" target="16" />
-    </bytecodeTargetLevel>
   </component>
 </project>

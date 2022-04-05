@@ -17,4 +17,5 @@ public interface ServiceComponent {
     GetStore provideGetStore();
     UpdateAccount provideUpdateAccount();
     UpdateStore provideUpdateStore();
+    LoginAccount provideLoginAccount();
 }

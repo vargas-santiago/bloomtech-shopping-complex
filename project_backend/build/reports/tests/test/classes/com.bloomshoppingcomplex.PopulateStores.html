@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PopulateStores</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PopulateStores</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.bloomshoppingcomplex.html">com.bloomshoppingcomplex</a> &gt; PopulateStores</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.366s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="StoresTable()"></a>
+<h3 class="failures">StoresTable()</h3>
+<span class="code">
+<pre>com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException: Requested resource not found (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ResourceNotFoundException; Request ID: V14LTDACNET6BVHC792VMJJ7FBVV4KQNSO5AEMVJF66Q9ASUAAJG; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1819)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1403)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1372)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient.doInvoke(AmazonDynamoDBClient.java:6214)
+	at com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient.invoke(AmazonDynamoDBClient.java:6181)
+	at com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient.executeUpdateItem(AmazonDynamoDBClient.java:5794)
+	at com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient.updateItem(AmazonDynamoDBClient.java:5758)
+	at com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper$SaveObjectHandler.doUpdateItem(DynamoDBMapper.java:871)
+	at com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper$2.executeLowLevelRequest(DynamoDBMapper.java:611)
+	at com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper$SaveObjectHandler.execute(DynamoDBMapper.java:750)
+	at com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper.save(DynamoDBMapper.java:640)
+	at com.amazonaws.services.dynamodbv2.datamodeling.AbstractDynamoDBMapper.save(AbstractDynamoDBMapper.java:123)
+	at com.bloomshoppingcomplex.DynamoDB.StoreDao.saveStore(StoreDao.java:40)
+	at com.bloomshoppingcomplex.PopulateStores.StoresTable(PopulateStores.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">StoresTable()</td>
+<td class="failures">1.366s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:53:22.073 [Test worker] WARN com.amazonaws.auth.profile.internal.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+14:53:22.082 [Test worker] WARN com.amazonaws.auth.profile.internal.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+14:53:22.109 [Test worker] DEBUG com.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+14:53:22.174 [Test worker] DEBUG com.amazonaws.metrics.AwsSdkMetrics - Admin mbean registered under com.amazonaws.management:type=AwsSdkMetrics
+14:53:22.400 [Test worker] DEBUG com.amazonaws.monitoring.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.EnvironmentVariableCsmConfigurationProvider@6eb6e9b6: Unable to load Client Side Monitoring configurations from environment variables!
+14:53:22.400 [java-sdk-http-connection-reaper] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
+14:53:22.400 [Test worker] DEBUG com.amazonaws.monitoring.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.SystemPropertyCsmConfigurationProvider@43d5b38d: Unable to load Client Side Monitoring configurations from system properties variables!
+14:53:22.402 [Test worker] WARN com.amazonaws.auth.profile.internal.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+14:53:22.403 [Test worker] DEBUG com.amazonaws.monitoring.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.ProfileCsmConfigurationProvider@72a55aa0: The 'default' profile does not define all the required properties!
+14:53:22.549 [Test worker] DEBUG com.amazonaws.auth.AWSCredentialsProviderChain - Unable to load credentials from EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY))
+14:53:22.550 [Test worker] DEBUG com.amazonaws.auth.AWSCredentialsProviderChain - Unable to load credentials from SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey)
+14:53:22.550 [Test worker] DEBUG com.amazonaws.auth.AWSCredentialsProviderChain - Unable to load credentials from WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path.
+14:53:22.552 [Test worker] DEBUG com.amazonaws.auth.AWSCredentialsProviderChain - Loading credentials from com.amazonaws.auth.profile.ProfileCredentialsProvider@5bc93684
+14:53:22.556 [Test worker] DEBUG com.amazonaws.request - Sending Request: POST https://dynamodb.us-west-2.amazonaws.com / Headers: (amz-sdk-invocation-id: 673e3f5a-33e7-c2ab-fbc9-680e474bb335, Content-Length: 369, Content-Type: application/x-amz-json-1.0, User-Agent: aws-sdk-java/1.11.1020 Windows_10/10.0 OpenJDK_64-Bit_Server_VM/11.0.12+7-LTS java/11.0.12 vendor/Amazon.com_Inc. cfg/retry-mode/legacy com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper/1.11.1020, X-Amz-Target: DynamoDB_20120810.UpdateItem, ) 
+14:53:22.599 [Test worker] DEBUG com.amazonaws.auth.AWS4Signer - AWS4 Canonical Request: '&quot;POST
+/
+
+amz-sdk-invocation-id:673e3f5a-33e7-c2ab-fbc9-680e474bb335
+amz-sdk-request:attempt=1;max=11
+amz-sdk-retry:0/0/500
+content-length:369
+content-type:application/x-amz-json-1.0
+host:dynamodb.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.1020 Windows_10/10.0 OpenJDK_64-Bit_Server_VM/11.0.12+7-LTS java/11.0.12 vendor/Amazon.com_Inc. cfg/retry-mode/legacy com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper/1.11.1020
+x-amz-date:20220404T195322Z
+x-amz-target:DynamoDB_20120810.UpdateItem
+
+amz-sdk-invocation-id;amz-sdk-request;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+06be202205f996dbf26b9089ec42838711c1becf38fc46aaba87ecb18d92c3b6&quot;
+14:53:22.599 [Test worker] DEBUG com.amazonaws.auth.AWS4Signer - AWS4 String to Sign: '&quot;AWS4-HMAC-SHA256
+20220404T195322Z
+20220404/us-west-2/dynamodb/aws4_request
+7c78af200e44f7e15fa459316328915d2c173cba8e2d916173adac61bf1524b6&quot;
+14:53:22.606 [Test worker] DEBUG com.amazonaws.auth.AWS4Signer - Generating a new signing key as the signing key not available in the cache for the date 1649030400000
+14:53:22.622 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+14:53:22.628 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+14:53:22.629 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://dynamodb.us-west-2.amazonaws.com:443][total available: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+14:53:22.641 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}-&gt;https://dynamodb.us-west-2.amazonaws.com:443][total available: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+14:53:22.642 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://dynamodb.us-west-2.amazonaws.com:443
+14:53:22.670 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to dynamodb.us-west-2.amazonaws.com/52.94.29.198:443
+14:53:22.670 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - connecting to dynamodb.us-west-2.amazonaws.com/52.94.29.198:443
+14:53:22.670 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - Connecting socket to dynamodb.us-west-2.amazonaws.com/52.94.29.198:443 with timeout 10000
+14:53:22.759 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1]
+14:53:22.759 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+14:53:22.759 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - socket.getSupportedProtocols(): [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1, SSLv3, SSLv2Hello], socket.getEnabledProtocols(): [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1]
+14:53:22.760 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1, TLSv1.3]
+14:53:22.760 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - Starting handshake
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory - Secure session established
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory -  negotiated protocol: TLSv1.2
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory -  peer principal: CN=dynamodb.us-west-2.amazonaws.com
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory -  peer alternative names: [dynamodb.us-west-2.amazonaws.com, *.ddb.us-west-2.amazonaws.com]
+14:53:23.009 [Test worker] DEBUG com.amazonaws.http.conn.ssl.SdkTLSSocketFactory -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+14:53:23.012 [Test worker] DEBUG com.amazonaws.internal.SdkSSLSocket - created: dynamodb.us-west-2.amazonaws.com/52.94.29.198:443
+14:53:23.013 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.0.37:55009&lt;-&gt;52.94.29.198:443
+14:53:23.013 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 50000
+14:53:23.013 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST / HTTP/1.1
+14:53:23.013 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+14:53:23.014 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; POST / HTTP/1.1
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: dynamodb.us-west-2.amazonaws.com
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; amz-sdk-invocation-id: 673e3f5a-33e7-c2ab-fbc9-680e474bb335
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; amz-sdk-request: attempt=1;max=11
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; amz-sdk-retry: 0/0/500
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Authorization: AWS4-HMAC-SHA256 Credential=AKIAXGTLW5JEH6AZZZNT/20220404/us-west-2/dynamodb/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=6e44f4534286f179f09781ba576796433bc316b99cb577cd226638688d071203
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Type: application/x-amz-json-1.0
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: aws-sdk-java/1.11.1020 Windows_10/10.0 OpenJDK_64-Bit_Server_VM/11.0.12+7-LTS java/11.0.12 vendor/Amazon.com_Inc. cfg/retry-mode/legacy com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper/1.11.1020
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; X-Amz-Date: 20220404T195322Z
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; X-Amz-Target: DynamoDB_20120810.UpdateItem
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Length: 369
+14:53:23.015 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;POST / HTTP/1.1[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: dynamodb.us-west-2.amazonaws.com[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;amz-sdk-invocation-id: 673e3f5a-33e7-c2ab-fbc9-680e474bb335[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;amz-sdk-request: attempt=1;max=11[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;amz-sdk-retry: 0/0/500[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Authorization: AWS4-HMAC-SHA256 Credential=AKIAXGTLW5JEH6AZZZNT/20220404/us-west-2/dynamodb/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=6e44f4534286f179f09781ba576796433bc316b99cb577cd226638688d071203[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Type: application/x-amz-json-1.0[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: aws-sdk-java/1.11.1020 Windows_10/10.0 OpenJDK_64-Bit_Server_VM/11.0.12+7-LTS java/11.0.12 vendor/Amazon.com_Inc. cfg/retry-mode/legacy com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper/1.11.1020[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;X-Amz-Date: 20220404T195322Z[\r][\n]&quot;
+14:53:23.016 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;X-Amz-Target: DynamoDB_20120810.UpdateItem[\r][\n]&quot;
+14:53:23.017 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Length: 369[\r][\n]&quot;
+14:53:23.017 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+14:53:23.017 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
+14:53:23.017 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;{&quot;TableName&quot;:&quot;stores&quot;,&quot;Key&quot;:{&quot;storeId&quot;:{&quot;S&quot;:&quot;Nz6FP&quot;}},&quot;AttributeUpdates&quot;:{&quot;popularity&quot;:{&quot;Value&quot;:{&quot;N&quot;:&quot;0&quot;},&quot;Action&quot;:&quot;PUT&quot;},&quot;name&quot;:{&quot;Value&quot;:{&quot;S&quot;:&quot;Abercrombie &amp; Fitch&quot;},&quot;Action&quot;:&quot;PUT&quot;},&quot;categories&quot;:{&quot;Value&quot;:{&quot;L&quot;:[{&quot;S&quot;:&quot;women's apparel&quot;},{&quot;S&quot;:&quot;men's apparel&quot;},{&quot;S&quot;:&quot;children's apparel&quot;}]},&quot;Action&quot;:&quot;PUT&quot;},&quot;items&quot;:{&quot;Value&quot;:{&quot;L&quot;:[]},&quot;Action&quot;:&quot;PUT&quot;}},&quot;ReturnValues&quot;:&quot;ALL_NEW&quot;}&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Server: Server[\r][\n]&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Mon, 04 Apr 2022 19:53:24 GMT[\r][\n]&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Type: application/x-amz-json-1.0[\r][\n]&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Length: 112[\r][\n]&quot;
+14:53:23.107 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+14:53:23.108 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;x-amzn-RequestId: V14LTDACNET6BVHC792VMJJ7FBVV4KQNSO5AEMVJF66Q9ASUAAJG[\r][\n]&quot;
+14:53:23.108 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;x-amz-crc32: 3737639027[\r][\n]&quot;
+14:53:23.108 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
+14:53:23.108 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;{&quot;__type&quot;:&quot;com.amazonaws.dynamodb.v20120810#ResourceNotFoundException&quot;,&quot;message&quot;:&quot;Requested resource not found&quot;}&quot;
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 400 Bad Request
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Server: Server
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Mon, 04 Apr 2022 19:53:24 GMT
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Type: application/x-amz-json-1.0
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Length: 112
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Connection: keep-alive
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; x-amzn-RequestId: V14LTDACNET6BVHC792VMJJ7FBVV4KQNSO5AEMVJF66Q9ASUAAJG
+14:53:23.110 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; x-amz-crc32: 3737639027
+14:53:23.113 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive for 60000 MILLISECONDS
+14:53:23.116 [Test worker] DEBUG com.amazonaws.retry.ClockSkewAdjuster - Reported server date (from 'Date' header): Mon, 04 Apr 2022 19:53:24 GMT
+14:53:23.123 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}-&gt;https://dynamodb.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+14:53:23.123 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+14:53:23.124 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}-&gt;https://dynamodb.us-west-2.amazonaws.com:443][total available: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+14:53:23.129 [Test worker] DEBUG com.amazonaws.request - Received error response: com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException: Requested resource not found (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ResourceNotFoundException; Request ID: V14LTDACNET6BVHC792VMJJ7FBVV4KQNSO5AEMVJF66Q9ASUAAJG; Proxy: null)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.0.2</a> at Apr 4, 2022, 2:53:23 PM</p>
+</div>
+</div>
+</body>
+</html>
