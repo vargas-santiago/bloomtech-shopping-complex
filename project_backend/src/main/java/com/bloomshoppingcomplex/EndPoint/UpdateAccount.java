@@ -39,22 +39,17 @@ public class UpdateAccount implements RequestHandler<UpdateAccountRequest, Updat
             throw new InvalidCharacterException();
         }
 
-        if (!AccountUtils.isValidString(updateAccountRequest.getUsername())) {
-            throw new InvalidCharacterException();
-        }
-
         if (!AccountUtils.isValidString(updateAccountRequest.getEmail())) {
             throw new InvalidCharacterException();
         }
 
-
-
-        if (!updateAccountRequest.getUserId().equals(updateAccount.getUserId())) {
-            throw new UserNotFoundException();
+        if (updateAccountRequest.getPassword() != null || !updateAccountRequest.getPassword().equals("")) {
+            updateAccount.setPassword(updateAccountRequest.getPassword());
         }
 
-        updateAccount.setUsername(updateAccountRequest.getUsername());
-        updateAccount.setEmail(updateAccountRequest.getEmail());
+        if (updateAccountRequest.getEmail() != null || !updateAccountRequest.getEmail().equals("")) {
+            updateAccount.setEmail(updateAccountRequest.getEmail());
+        }
 
         this.accountDao.saveAccount(updateAccount);
 

@@ -25,10 +25,10 @@ We want you to see the full set of expectations for transparency’s sake.*
 |[Design Document](design_document.md)                            |Sprint 1 Friday by 5pm    |               |                                  |
 |Project Completion (Feature Complete)                            |Sprint 3 Friday by 5pm    |               |                                  |
 |[Team Reflection](reflection.md)                                 |Sprint 4 Wednesday by 5PM |               |                                  |
-|[Accomplishment Tracking (person 1)](accomplishment_tracking.md) |Sprint 4 Wednesday by 5PM |               |                                  |
-|[Accomplishment Tracking (person 2)](accomplishment_tracking.md) |Sprint 4 Wednesday by 5PM |               |                                  |
-|[Accomplishment Tracking (person 3)](accomplishment_tracking.md) |Sprint 4 Wednesday by 5PM |               |                                  |
-|[Accomplishment Tracking (person 4)](accomplishment_tracking.md) |Sprint 4 Wednesday by 5PM |               |                                  |
+|[Accomplishment Tracking (person 1)](accomplishment_tracking_kassandra.md) |Sprint 4 Wednesday by 5PM |               |                                  |
+|[Accomplishment Tracking (person 2)](accomplishment_tracking_kassandra.md) |Sprint 4 Wednesday by 5PM |               |                                  |
+|[Accomplishment Tracking (person 3)](accomplishment_tracking_kassandra.md) |Sprint 4 Wednesday by 5PM |               |                                  |
+|[Accomplishment Tracking (person 4)](accomplishment_tracking_kassandra.md) |Sprint 4 Wednesday by 5PM |               |                                  |
 |Self Reflection (person 1)                        |Sprint 4 Wednesday by 5PM |               |n/a (will be submitted via Canvas - "Wrap-up" section) |
 |Self Reflection (person 2)                        |Sprint 4 Wednesday by 5PM |               |n/a (will be submitted via Canvas - "Wrap-up" section) |
 |Self Reflection (person 3)                        |Sprint 4 Wednesday by 5PM |               |n/a (will be submitted via Canvas - "Wrap-up" section) |

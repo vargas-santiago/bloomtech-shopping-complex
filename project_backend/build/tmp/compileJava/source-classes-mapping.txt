@@ -26,9 +26,8 @@ com/bloomshoppingcomplex/auth/UserLoginResponsePayload.java
 com/bloomshoppingcomplex/Models/Request/UpdateStoreRequest.java
  com.bloomshoppingcomplex.Models.Request.UpdateStoreRequest
  com.bloomshoppingcomplex.Models.Request.UpdateStoreRequest$Builder
-com/bloomshoppingcomplex/Models/Request/UpdateAccountRequest.java
- com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest
- com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest$Builder
+com/bloomshoppingcomplex/EndPoint/LoginAccount.java
+ com.bloomshoppingcomplex.EndPoint.LoginAccount
 com/bloomshoppingcomplex/Models/result/UpdateStoreResult.java
  com.bloomshoppingcomplex.Models.result.UpdateStoreResult
  com.bloomshoppingcomplex.Models.result.UpdateStoreResult$Builder
@@ -91,8 +90,8 @@ com/bloomshoppingcomplex/Models/result/CreateAccountResult.java
  com.bloomshoppingcomplex.Models.result.CreateAccountResult$Builder
 com/bloomshoppingcomplex/lambda/AddFavoriteProvider.java
  com.bloomshoppingcomplex.lambda.AddFavoriteProvider
-com/bloomshoppingcomplex/lambda/UpdateAccountProvider.java
- com.bloomshoppingcomplex.lambda.UpdateAccountProvider
+com/bloomshoppingcomplex/Converter/ModelConverter.java
+ com.bloomshoppingcomplex.Converter.ModelConverter
 com/bloomshoppingcomplex/EndPoint/GetAccount.java
  com.bloomshoppingcomplex.EndPoint.GetAccount
 com/bloomshoppingcomplex/EndPoint/AddFavorite.java
@@ -100,8 +99,8 @@ com/bloomshoppingcomplex/EndPoint/AddFavorite.java
 com/bloomshoppingcomplex/Models/result/AddFavoriteResult.java
  com.bloomshoppingcomplex.Models.result.AddFavoriteResult
  com.bloomshoppingcomplex.Models.result.AddFavoriteResult$Builder
-com/bloomshoppingcomplex/EndPoint/UpdateAccount.java
- com.bloomshoppingcomplex.EndPoint.UpdateAccount
+com/bloomshoppingcomplex/lambda/LoginAccountProvider.java
+ com.bloomshoppingcomplex.lambda.LoginAccountProvider
 com/bloomshoppingcomplex/Models/result/UpdateAccountResult.java
  com.bloomshoppingcomplex.Models.result.UpdateAccountResult
  com.bloomshoppingcomplex.Models.result.UpdateAccountResult$Builder
@@ -129,11 +128,12 @@ com/bloomshoppingcomplex/Models/result/DeleteFavoriteResult.java
  com.bloomshoppingcomplex.Models.result.DeleteFavoriteResult$Builder
 com/bloomshoppingcomplex/DynamoDB/Models/Account.java
  com.bloomshoppingcomplex.DynamoDB.Models.Account
-com/bloomshoppingcomplex/Converter/ModelConverter.java
- com.bloomshoppingcomplex.Converter.ModelConverter
+com/bloomshoppingcomplex/Models/Request/UpdateAccountRequest.java
+ com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest
+ com.bloomshoppingcomplex.Models.Request.UpdateAccountRequest$Builder
 com/bloomshoppingcomplex/dependency/ServiceComponent.java
  com.bloomshoppingcomplex.dependency.ServiceComponent
-com/bloomshoppingcomplex/lambda/LoginAccountProvider.java
- com.bloomshoppingcomplex.lambda.LoginAccountProvider
-com/bloomshoppingcomplex/EndPoint/LoginAccount.java
- com.bloomshoppingcomplex.EndPoint.LoginAccount
+com/bloomshoppingcomplex/EndPoint/UpdateAccount.java
+ com.bloomshoppingcomplex.EndPoint.UpdateAccount
+com/bloomshoppingcomplex/lambda/UpdateAccountProvider.java
+ com.bloomshoppingcomplex.lambda.UpdateAccountProvider

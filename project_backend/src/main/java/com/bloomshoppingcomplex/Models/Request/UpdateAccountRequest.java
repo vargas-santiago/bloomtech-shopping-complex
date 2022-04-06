@@ -3,21 +3,22 @@ package com.bloomshoppingcomplex.Models.Request;
 import java.util.Objects;
 
 public class UpdateAccountRequest {
+
     private String userId;
-    private String username;
+    private String password;
     private String email;
 
     public UpdateAccountRequest() {}
 
-    public UpdateAccountRequest(String userId, String username, String email) {
+    public UpdateAccountRequest(String userId, String password, String email) {
         this.userId = userId;
-        this.username = username;
+        this.password = password;
         this.email = email;
     }
 
     public UpdateAccountRequest(Builder builder) {
         this.userId = builder.userId;
-        this.username = builder.username;
+        this.password = builder.password;
         this.email = builder.email;
     }
 
@@ -29,18 +30,16 @@ public class UpdateAccountRequest {
         this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPassword() {
+        return password;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -48,21 +47,21 @@ public class UpdateAccountRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof UpdateAccountRequest)) return false;
         UpdateAccountRequest that = (UpdateAccountRequest) o;
-        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getUsername(), that.getUsername()) && Objects.equals(getEmail(), that.getEmail());
+        return Objects.equals(getUserId(), that.getUserId()) && Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getEmail(), that.getEmail());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getUsername(), getEmail());
+        return Objects.hash(getUserId(), getPassword(), getEmail());
     }
 
     @Override
     public String toString() {
         return "UpdateAccountRequest{" +
                 "userId='" + userId + '\'' +
-                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
@@ -73,7 +72,7 @@ public class UpdateAccountRequest {
 
     public static final class Builder {
         private String userId;
-        private String username;
+        private String password;
         private String email;
 
         private Builder() {}
@@ -83,8 +82,8 @@ public class UpdateAccountRequest {
             return this;
         }
 
-        public Builder withUsername(String usernameToUse) {
-            this.username = usernameToUse;
+        public Builder withPassword(String passwordToUse) {
+            this.password = passwordToUse;
             return this;
         }
 

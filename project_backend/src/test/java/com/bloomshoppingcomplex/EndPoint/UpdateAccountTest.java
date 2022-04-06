@@ -83,7 +83,7 @@ public class UpdateAccountTest {
             UpdateAccountRequest request = new UpdateAccountRequest().builder()
                     .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
-                    .withUsername(account.getUsername())
+//                    .withUsername(account.getUsername())
                     .build();
 
             updateAccountRequests.add(request);
@@ -112,7 +112,7 @@ public class UpdateAccountTest {
             UpdateAccountRequest request = new UpdateAccountRequest().builder()
                     .withUserId(account.getUserId())
                     .withEmail(account.getEmail())
-                    .withUsername(account.getUsername())
+//                    .withUsername(account.getUsername())
                     .build();
 
             updateAccountRequests.add(request);

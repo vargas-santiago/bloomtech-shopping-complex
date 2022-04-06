@@ -27,69 +27,8 @@ import tmobile from './storelogo/tmobile150x150.png';
 import verizon from './storelogo/verizon150x150.png';
 import yankee from './storelogo/yankeecandle150x150.png';
 import zales from './storelogo/zales150x150.png';
-import './index.css';
-import axios from "axios";
-import {getUserId, setUserSession} from "./service/AuthService";
 
-const Stores = async () => {
-    let abercrombieId = "z2fBI";
-    let aeId = "00002";
-    let barnesId = "00003";
-    let bathBodyId = "00004";
-    let footId = "00005";
-    let gamestopId = "00006";
-    let gncId = "00007";
-    let hollisterId = "00008";
-    let journeyId = "00009";
-    let kayId = "00010";
-    let lanailsId = "00011";
-    let legacyId = "00012";
-    let legoId = "00013";
-    let lidsId = "00014";
-    let loveId = "00015";
-    let nikeId = "00016";
-    let northfaceId = "00017";
-    let oldnavyId = "00018";
-    let pandoraId = "00019";
-    let pierceId = "00020";
-    let pinkId = "00021";
-    let sephoraId = "00022";
-    let sleepId = "00023";
-    let spencersId = "00024";
-    let tmobileId = "00025";
-    let verizonId = "00026";
-    let zalesId = "00027";
-
-    const favoritePutUrl = 'https://rzfy99sz8c.execute-api.us-west-2.amazonaws.com/testing2/accounts/favorites';
-
-    const submitHandler = async (event) => {
-        event.preventDefault();
-
-        let storeId = "00000";
-
-        console.log(event.srcElement.id);
-        const data = {
-            userId: getUserId(),
-            storeId: storeId
-        }
-
-        try {
-            let res = await axios({
-                method: 'PUT',
-                data: data,
-                url: favoritePutUrl
-            });
-
-            if (res.status === 200) {
-                setUserSession(res.data.accountModel.username, res.data.accountModel.userId, res.data.accountModel.email, res.data.accountModel.favorites);
-                console.log(res);
-            }
-        }
-        catch (error) {
-
-        }
-    }
-
+const Stores = () => {
     return (
         <div>
             <section className="stores">
@@ -104,7 +43,6 @@ const Stores = async () => {
                         <a href="https://www.abercrombie.com/shop/us" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -116,7 +54,6 @@ const Stores = async () => {
                         <a href="https://www.ae.com/us/en" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -128,7 +65,6 @@ const Stores = async () => {
                         <a href="https://www.barnesandnoble.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -140,7 +76,6 @@ const Stores = async () => {
                         <a href="https://www.bathandbodyworks.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -152,7 +87,6 @@ const Stores = async () => {
                         <a href="https://www.footlocker.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -164,7 +98,6 @@ const Stores = async () => {
                         <a href="https://www.gamestop.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -176,7 +109,6 @@ const Stores = async () => {
                         <a href="https://www.gnc.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -188,7 +120,6 @@ const Stores = async () => {
                         <a href="https://www.hollisterco.com/shop/us" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -200,7 +131,6 @@ const Stores = async () => {
                         <a href="https://www.journeys.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -212,7 +142,6 @@ const Stores = async () => {
                         <a href="https://www.kay.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -224,7 +153,6 @@ const Stores = async () => {
                         <a href="https://www.lanailsbeauty.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -236,7 +164,6 @@ const Stores = async () => {
                         <a href="https://www.legacytoys.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -248,7 +175,6 @@ const Stores = async () => {
                         <a href="https://www.lego.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -260,7 +186,6 @@ const Stores = async () => {
                         <a href="https://www.lids.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -272,7 +197,6 @@ const Stores = async () => {
                         <a href="https://www.lovesac.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -284,7 +208,6 @@ const Stores = async () => {
                         <a href="https://www.nike.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -296,7 +219,6 @@ const Stores = async () => {
                         <a href="https://www.thenorthface.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -308,7 +230,6 @@ const Stores = async () => {
                         <a href="https://www.oldnavy.gap.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -320,7 +241,6 @@ const Stores = async () => {
                         <a href="https://www.pandora.net/en-ng" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -332,7 +252,6 @@ const Stores = async () => {
                         <a href="https://www.banter.com/" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -344,7 +263,6 @@ const Stores = async () => {
                         <a href="https://www.victoriassecret.com/us/pink" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -356,7 +274,6 @@ const Stores = async () => {
                         <a href="https://www.sephora.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -368,7 +285,6 @@ const Stores = async () => {
                         <a href="https://www.sleepnumber.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -380,7 +296,6 @@ const Stores = async () => {
                         <a href="https://www.spencers.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -392,7 +307,6 @@ const Stores = async () => {
                         <a href="https://www.t-mobile.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -404,7 +318,6 @@ const Stores = async () => {
                         <a href="https://www.verizon.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -416,7 +329,6 @@ const Stores = async () => {
                         <a href="https://www.yankeecandle.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                     <div className="item">
@@ -428,7 +340,6 @@ const Stores = async () => {
                         <a href="https://www.zales.com" target="_blank" rel="noreferrer">
                             <button className="btn">Visit this Store</button>
                         </a>
-                        <button className="favoritesButton">Add To Favorites</button>
                     </div>
 
                 </div>
