@@ -223,7 +223,7 @@ first page is a basic login page with username and password fields and "login"
 and "sign up" buttons. Clicking the sign up button takes you to the sign up page.
 The sign up page says "Sign Up" with fields to enter a username, password, name, 
 and email. There is a "cancel" button to return to the login page and a "sign up" 
-button to create a new user account.](images/design_document/signup.png)
+button to create a new user account.](project_documents/images/design_document/signup.png)
 
 ![The account details page says "Your Account" and displays the userId, name and 
 email of the logged in account. Clicking the view button next to "Favorites:" 
